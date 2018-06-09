@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: pcborty
@@ -11,6 +12,9 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+    <form:form modelAttribute="patient" method="post">
+      <form:input path="name"/>
+      <button type="submit">Save</button>
+    </form:form>
   </body>
 </html>

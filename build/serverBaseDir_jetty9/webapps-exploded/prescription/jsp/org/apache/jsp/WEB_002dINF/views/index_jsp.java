@@ -11,10 +11,23 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_input_path_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_form_modelAttribute_method;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_form_input_path_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_form_form_modelAttribute_method = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_form_input_path_nobody.release();
+    _jspx_tagPool_form_form_modelAttribute_method.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -41,6 +54,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write('\n');
       out.write("\n");
       out.write("\n");
       out.write("<html>\n");
@@ -48,7 +62,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    <title>$Title$</title>\n");
       out.write("  </head>\n");
       out.write("  <body>\n");
-      out.write("  $END$\n");
+      out.write("    ");
+      if (_jspx_meth_form_form_0(_jspx_page_context))
+        return;
+      out.write("\n");
       out.write("  </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
@@ -62,5 +79,72 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_form_form_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  form:form
+    org.springframework.web.servlet.tags.form.FormTag _jspx_th_form_form_0 = (org.springframework.web.servlet.tags.form.FormTag) _jspx_tagPool_form_form_modelAttribute_method.get(org.springframework.web.servlet.tags.form.FormTag.class);
+    _jspx_th_form_form_0.setPageContext(_jspx_page_context);
+    _jspx_th_form_form_0.setParent(null);
+    _jspx_th_form_form_0.setModelAttribute("patient");
+    _jspx_th_form_form_0.setMethod("post");
+    int[] _jspx_push_body_count_form_form_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_form_form_0 = _jspx_th_form_form_0.doStartTag();
+      if (_jspx_eval_form_form_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\n");
+          out.write("      ");
+          if (_jspx_meth_form_input_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_form_form_0, _jspx_page_context, _jspx_push_body_count_form_form_0))
+            return true;
+          out.write("\n");
+          out.write("      <button type=\"submit\">Save</button>\n");
+          out.write("    ");
+          int evalDoAfterBody = _jspx_th_form_form_0.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_form_form_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_form_form_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_form_form_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_form_form_0.doFinally();
+      _jspx_tagPool_form_form_modelAttribute_method.reuse(_jspx_th_form_form_0);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_form_input_0(javax.servlet.jsp.tagext.JspTag _jspx_th_form_form_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_form_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  form:input
+    org.springframework.web.servlet.tags.form.InputTag _jspx_th_form_input_0 = (org.springframework.web.servlet.tags.form.InputTag) _jspx_tagPool_form_input_path_nobody.get(org.springframework.web.servlet.tags.form.InputTag.class);
+    _jspx_th_form_input_0.setPageContext(_jspx_page_context);
+    _jspx_th_form_input_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_0);
+    _jspx_th_form_input_0.setPath("name");
+    int[] _jspx_push_body_count_form_input_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_form_input_0 = _jspx_th_form_input_0.doStartTag();
+      if (_jspx_th_form_input_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_form_input_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_form_input_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_form_input_0.doFinally();
+      _jspx_tagPool_form_input_path_nobody.reuse(_jspx_th_form_input_0);
+    }
+    return false;
   }
 }
