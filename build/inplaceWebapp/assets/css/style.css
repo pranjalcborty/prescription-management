@@ -1,0 +1,11 @@
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    font-family: 'Lora', serif;
+}
+
+.navbar-inverse, .jumbotron {
+    background-color: rgba(34, 34, 34, 0.9);
+}
