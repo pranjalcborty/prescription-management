@@ -3,14 +3,14 @@ package com.prescription.proj.domain;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotNull;
+import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
+import java.util.Date;
 
-@Entity
+@MappedSuperclass
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -19,21 +19,6 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Length(min = 1, max = 30)
-    private String name;
-
-    @Length(min = 4, max = 10)
-    private String userName;
-
-    @Email
-    private String email;
-
-    @Length(min = 6)
-    private String password;
-
-    @NotNull
-    private String phone;
-
     public long getId() {
         return id;
     }
@@ -41,6 +26,24 @@ public class User implements Serializable {
     public void setId(long id) {
         this.id = id;
     }
+
+    @Length(max = 30)
+    private String name;
+
+    @Length(min = 4, max = 10)
+    private String userName;
+
+    @Email
+    @Length(max = 50)
+    private String email;
+
+    @Length(min = 6, max = 30)
+    private String password;
+
+    @Length(max = 15)
+    private String phone;
+
+    private Date createdOn;
 
     public String getName() {
         return name;
@@ -54,8 +57,8 @@ public class User implements Serializable {
         return userName;
     }
 
-    public void setUserName(String username) {
-        this.userName = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getEmail() {
@@ -80,5 +83,13 @@ public class User implements Serializable {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public Date getCreatedOn() {
+        return createdOn;
+    }
+
+    public void setCreatedOn(Date createdOn) {
+        this.createdOn = createdOn;
     }
 }

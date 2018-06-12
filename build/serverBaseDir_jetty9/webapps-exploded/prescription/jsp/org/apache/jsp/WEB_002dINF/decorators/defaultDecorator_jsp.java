@@ -12,6 +12,7 @@ public final class defaultDecorator_jsp extends org.apache.jasper.runtime.HttpJs
   private static java.util.List<String> _jspx_dependants;
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_decorator_title_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_fmt_message_key_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_url_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_decorator_body_nobody;
 
@@ -23,12 +24,14 @@ public final class defaultDecorator_jsp extends org.apache.jasper.runtime.HttpJs
 
   public void _jspInit() {
     _jspx_tagPool_decorator_title_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_fmt_message_key_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_decorator_body_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_decorator_title_nobody.release();
+    _jspx_tagPool_fmt_message_key_nobody.release();
     _jspx_tagPool_c_url_value_nobody.release();
     _jspx_tagPool_decorator_body_nobody.release();
   }
@@ -61,6 +64,7 @@ public final class defaultDecorator_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
+      out.write("\r\n");
       out.write("<html>\r\n");
       out.write("<head>\r\n");
       out.write("    <title>");
@@ -83,21 +87,27 @@ public final class defaultDecorator_jsp extends org.apache.jasper.runtime.HttpJs
       if (_jspx_meth_c_url_3(_jspx_page_context))
         return;
       out.write("\">\r\n");
-      out.write("    <style>body {background-image: url(\"");
+      out.write("    <link href=\"");
       if (_jspx_meth_c_url_4(_jspx_page_context))
         return;
-      out.write("\");}</style>\r\n");
-      out.write("    <link href=\"");
+      out.write("\" rel=\"stylesheet\">\r\n");
+      out.write("    <style>body {background-image: url(\"");
       if (_jspx_meth_c_url_5(_jspx_page_context))
         return;
-      out.write("\" rel=\"stylesheet\">\r\n");
+      out.write("\");}</style>\r\n");
       out.write("</head>\r\n");
       out.write("<body>\r\n");
       out.write("<nav class=\"navbar navbar-inverse navbar-static-top\">\r\n");
       out.write("    <div class=\"container-fluid\">\r\n");
       out.write("        <div class=\"navbar-header\">\r\n");
-      out.write("            <a class=\"navbar-brand\" href=\"#\">\r\n");
-      out.write("                <i class=\"fas fa-notes-medical\"></i> Prescription Point\r\n");
+      out.write("            <a class=\"navbar-brand\" href=\"");
+      if (_jspx_meth_c_url_6(_jspx_page_context))
+        return;
+      out.write("\">\r\n");
+      out.write("                <i class=\"fas fa-notes-medical\"></i>");
+      if (_jspx_meth_fmt_message_0(_jspx_page_context))
+        return;
+      out.write("\r\n");
       out.write("            </a>\r\n");
       out.write("        </div>\r\n");
       out.write("    </div>\r\n");
@@ -110,15 +120,15 @@ public final class defaultDecorator_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("</div>\r\n");
       out.write("\r\n");
       out.write("<script src=\"");
-      if (_jspx_meth_c_url_6(_jspx_page_context))
-        return;
-      out.write("\"></script>\r\n");
-      out.write("<script src=\"");
       if (_jspx_meth_c_url_7(_jspx_page_context))
         return;
       out.write("\"></script>\r\n");
       out.write("<script src=\"");
       if (_jspx_meth_c_url_8(_jspx_page_context))
+        return;
+      out.write("\"></script>\r\n");
+      out.write("<script src=\"");
+      if (_jspx_meth_c_url_9(_jspx_page_context))
         return;
       out.write("\"></script>\r\n");
       out.write("</body>\r\n");
@@ -233,7 +243,7 @@ public final class defaultDecorator_jsp extends org.apache.jasper.runtime.HttpJs
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_4 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_4.setPageContext(_jspx_page_context);
     _jspx_th_c_url_4.setParent(null);
-    _jspx_th_c_url_4.setValue("/assets/images/appointment.jpg");
+    _jspx_th_c_url_4.setValue("/assets/webfonts/lora.css");
     int _jspx_eval_c_url_4 = _jspx_th_c_url_4.doStartTag();
     if (_jspx_th_c_url_4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_4);
@@ -251,13 +261,49 @@ public final class defaultDecorator_jsp extends org.apache.jasper.runtime.HttpJs
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_5 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_5.setPageContext(_jspx_page_context);
     _jspx_th_c_url_5.setParent(null);
-    _jspx_th_c_url_5.setValue("https://fonts.googleapis.com/css?family=Lora");
+    _jspx_th_c_url_5.setValue("/assets/images/appointment.jpg");
     int _jspx_eval_c_url_5 = _jspx_th_c_url_5.doStartTag();
     if (_jspx_th_c_url_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_5);
       return true;
     }
     _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_5);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_6(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_6 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_6.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_6.setParent(null);
+    _jspx_th_c_url_6.setValue("/login");
+    int _jspx_eval_c_url_6 = _jspx_th_c_url_6.doStartTag();
+    if (_jspx_th_c_url_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_6);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_6);
+    return false;
+  }
+
+  private boolean _jspx_meth_fmt_message_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  fmt:message
+    org.apache.taglibs.standard.tag.rt.fmt.MessageTag _jspx_th_fmt_message_0 = (org.apache.taglibs.standard.tag.rt.fmt.MessageTag) _jspx_tagPool_fmt_message_key_nobody.get(org.apache.taglibs.standard.tag.rt.fmt.MessageTag.class);
+    _jspx_th_fmt_message_0.setPageContext(_jspx_page_context);
+    _jspx_th_fmt_message_0.setParent(null);
+    _jspx_th_fmt_message_0.setKey("label.title");
+    int _jspx_eval_fmt_message_0 = _jspx_th_fmt_message_0.doStartTag();
+    if (_jspx_th_fmt_message_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_fmt_message_key_nobody.reuse(_jspx_th_fmt_message_0);
+      return true;
+    }
+    _jspx_tagPool_fmt_message_key_nobody.reuse(_jspx_th_fmt_message_0);
     return false;
   }
 
@@ -278,24 +324,6 @@ public final class defaultDecorator_jsp extends org.apache.jasper.runtime.HttpJs
     return false;
   }
 
-  private boolean _jspx_meth_c_url_6(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:url
-    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_6 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
-    _jspx_th_c_url_6.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_6.setParent(null);
-    _jspx_th_c_url_6.setValue("/assets/js/jquery-3.3.1.min.js");
-    int _jspx_eval_c_url_6 = _jspx_th_c_url_6.doStartTag();
-    if (_jspx_th_c_url_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_6);
-      return true;
-    }
-    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_6);
-    return false;
-  }
-
   private boolean _jspx_meth_c_url_7(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -304,7 +332,7 @@ public final class defaultDecorator_jsp extends org.apache.jasper.runtime.HttpJs
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_7 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_7.setPageContext(_jspx_page_context);
     _jspx_th_c_url_7.setParent(null);
-    _jspx_th_c_url_7.setValue("/assets/js/bootstrap.min.js");
+    _jspx_th_c_url_7.setValue("/assets/js/jquery-3.3.1.min.js");
     int _jspx_eval_c_url_7 = _jspx_th_c_url_7.doStartTag();
     if (_jspx_th_c_url_7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_7);
@@ -322,13 +350,31 @@ public final class defaultDecorator_jsp extends org.apache.jasper.runtime.HttpJs
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_8 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_8.setPageContext(_jspx_page_context);
     _jspx_th_c_url_8.setParent(null);
-    _jspx_th_c_url_8.setValue("/assets/js/script.js");
+    _jspx_th_c_url_8.setValue("/assets/js/bootstrap.min.js");
     int _jspx_eval_c_url_8 = _jspx_th_c_url_8.doStartTag();
     if (_jspx_th_c_url_8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_8);
       return true;
     }
     _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_8);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_9(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_9 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_9.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_9.setParent(null);
+    _jspx_th_c_url_9.setValue("/assets/js/script.js");
+    int _jspx_eval_c_url_9 = _jspx_th_c_url_9.doStartTag();
+    if (_jspx_th_c_url_9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_9);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_9);
     return false;
   }
 }

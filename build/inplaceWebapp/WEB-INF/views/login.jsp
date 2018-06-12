@@ -3,7 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
-  User: pcborty
+  Admin: pcborty
   Date: 09-Jun-18
   Time: 7:21 PM
   To change this template use File | Settings | File Templates.
@@ -17,35 +17,46 @@
 <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
         <div class="jumbotron">
-            <h3 class="text-center"><fmt:message key="label.login"/></h3>
+            <div class="text-center">
+                <h3><fmt:message key="label.login"/></h3>
+            </div>
 
-            <form:errors path="user"/>
-            <form:form modelAttribute="user" method="post">
-                <div class="form-group">
-                    <label>Email</label>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <form:input path="userName" type="text" class="form-control"/>
-                    </div>
-                </div>
+            <div class="error text-center">
+                <form:errors path="loginUser"/>
+            </div>
 
-                <div class="form-group">
-                    <label>Password</label>
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <form:input path="password" type="password" class="form-control"/>
+            <div>
+                <form:form modelAttribute="loginUser" method="post">
+                    <div class="form-group">
+                        <label><fmt:message key="label.userName"/></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                            <form:input path="userName" type="text" class="form-control"/>
+                        </div>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-xs-6">
-                        <button type="submit" class="btn btn-block btn-success">Log in</button>
+                    <div class="form-group">
+                        <label><fmt:message key="label.password"/></label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                            <form:input path="password" type="password" class="form-control"/>
+                        </div>
                     </div>
-                    <div class="col-xs-6">
-                        <a href="<c:url value='register'/>" class="btn btn-block btn-primary">Register</a>
+
+                    <div class="form-check">
+                        <div>
+                            <form:radiobutton path="doctor" value="true"/> Doctor
+                        </div>
+                        <div>
+                            <form:radiobutton path="doctor" value="false"/> Admin
+                        </div>
                     </div>
-                </div>
-            </form:form>
+
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-success">Log in</button>
+                    </div>
+                </form:form>
+            </div>
         </div>
     </div>
 </div>

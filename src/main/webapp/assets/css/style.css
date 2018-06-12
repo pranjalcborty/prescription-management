@@ -9,3 +9,7 @@ body {
 .navbar-inverse, .jumbotron {
     background-color: rgba(34, 34, 34, 0.9);
 }
+
+.error {
+    color: red !important;
+}
