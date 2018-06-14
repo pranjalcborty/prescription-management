@@ -1,95 +1,49 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
-  Admin: pcborty
-  Date: 12-Jun-18
-  Time: 8:34 PM
+  User: pcborty
+  Date: 14-Jun-18
+  Time: 12:00 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title><fmt:message key="label.register"/></title>
+    <title>Prescription</title>
 </head>
 <body>
-<form:form
 <div class="jumbotron">
-    <div class="row">
-        <div class="col-xs-3">
-            <legend>Miscellaneous</legend>
-            <div class="form-group">
-                <label>Disease/ Condition/ Dx</label>
-                <input type="text" class="form-control">
-            </div>
-
-            <div class="form-group">
-                <label>C/C</label>
-                <textarea class="form-control"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>O/E</label>
-                <textarea class="form-control"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>lx</label>
-                <textarea class="form-control"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>Advice (Ctrl+m to switch to bangla)</label>
-                <textarea class="form-control bangla"></textarea>
-            </div>
-        </div>
-
-        <div class="col-xs-6">
-            <legend>Prescription body</legend>
-            <textarea id="jqte"></textarea>
-
-            <div class="pull-left">
-                <button type="button" class="btn btn-danger" onclick="$('#jqte').jqteVal('');">
-                    <i class="fas fa-times"></i> Clear All</button>
-            </div>
-            <div class="pull-right">
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#med">
-                    <i class="fas fa-plus"></i> Add medicine</button>
-            </div>
-        </div>
-
-        <div class="col-xs-3">
-            <legend>Patient info</legend>
-            <div class="form-group">
-                <label>Name</label>
-                <input type="text" class="form-control">
-            </div>
-
-            <div class="row">
-                <div class="col-xs-6">
-                    <div class="form-group">
-                        <label>Age</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-                <div class="col-xs-6">
-                    <div class="form-group">
-                        <label>Sex</label>
-                        <input type="text" class="form-control">
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label>Address</label>
-                <textarea class="form-control"></textarea>
-            </div>
-
-            <div class="form-group">
-                <label>Phone no.</label>
-                <input type="text" class="form-control">
-            </div>
-        </div>
+    <div class="table-responsive">
+        <table id="dataTable" class="table table-bordered">
+            <thead>
+            <tr>
+                <th>Patient Id</th>
+                <th>Patient Name</th>
+                <th>Doctor Name</th>
+                <th>Prescription Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <c:forEach items="${prescriptions}" var="prescription">
+                <tr>
+                    <td><c:out value="${prescription.patient.id}"/></td>
+                    <td><c:out value="${prescription.patient.name}"/></td>
+                    <td><c:out value="${prescription.doctor.name}"/></td>
+                    <td><c:out value="${prescription.createdOn}"/></td>
+                </tr>
+            </c:forEach>
+            </tbody>
+        </table>
     </div>
+    <a href="<c:url value='/createPrescription'/>" class="btn btn-success"><i class="fa fa-plus"></i> Create prescription</a>
 </div>
+
+<script src="<c:url value='/assets/js/jquery.dataTables.min.js'/>"></script>
+<script src="<c:url value='/assets/js/dataTables.bootstrap.min.js'/>"></script>
+<script>
+    $(function () {
+        $("#dataTable").DataTable();
+    })
+</script>
 </body>
 </html>
