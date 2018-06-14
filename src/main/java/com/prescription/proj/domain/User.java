@@ -3,10 +3,7 @@ package com.prescription.proj.domain;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
@@ -42,6 +39,9 @@ public class User implements Serializable {
 
     @Length(max = 15)
     private String phone;
+
+    @Transient
+    private String customId;
 
     private Date createdOn;
 
@@ -83,6 +83,14 @@ public class User implements Serializable {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getCustomId() {
+        return customId;
+    }
+
+    public void setCustomId(String customId) {
+        this.customId = customId;
     }
 
     public Date getCreatedOn() {

@@ -77,7 +77,7 @@ public class AuthController {
          session.setAttribute(USER,
                  (user.isDoctor()
                          ? doctorService.getDoctorByUserName(user.getUserName())
-                         : adminService.getUserByUserName(user.getUserName())));
+                         : adminService.getAdminByUserName(user.getUserName())));
 
          session.setAttribute(IS_DOCTOR, user.isDoctor());
 
@@ -110,6 +110,7 @@ public class AuthController {
         status.setComplete();
         session.removeAttribute(USER);
         session.removeAttribute(IS_DOCTOR);
+
         return redirectTo(LOGIN_PATH);
     }
 }

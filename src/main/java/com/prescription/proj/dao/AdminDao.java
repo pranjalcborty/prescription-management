@@ -16,7 +16,7 @@ public class AdminDao {
     private EntityManager em;
 
     @Transactional
-    public Admin getUserByUserName(String userName) {
+    public Admin getAdminByUsername(String userName) {
         String jpql = "SELECT a FROM Admin a WHERE a.userName LIKE :userName";
 
         try {
@@ -28,7 +28,7 @@ public class AdminDao {
         }
     }
 
-    public List<Admin> getUserListWithUniqueIdentifiers(Admin admin) {
+    public List<Admin> getAdminListWithUniqueIdentifiers(Admin admin) {
         String jpql = "SELECT a FROM Admin a WHERE a.userName LIKE :userName";
 
         return em.createQuery(jpql, Admin.class)

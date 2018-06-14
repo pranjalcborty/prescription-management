@@ -14,10 +14,16 @@
     <title><decorator:title/></title>
     <link rel="icon" href="<c:url value='/assets/images/plus.ico'/>">
     <link rel="stylesheet" href="<c:url value='/assets/css/bootstrap.min.css'/>">
+    <link rel="stylesheet" href="<c:url value='/assets/css/dataTables.bootstrap.min.css'/>">
     <link rel="stylesheet" href="<c:url value='/assets/css/fontawesome-all.min.css'/>">
     <link rel="stylesheet" href="<c:url value='/assets/css/style.css'/>">
     <link href="<c:url value='/assets/webfonts/lora.css'/>" rel="stylesheet">
+
     <style>body {background-image: url("<c:url value='/assets/images/appointment.jpg'/>");}</style>
+
+    <script src="<c:url value='/assets/js/jquery-3.3.1.min.js'/>"></script>
+    <script src="<c:url value='/assets/js/bootstrap.min.js'/>"></script>
+    <script src="<c:url value='/assets/js/script.js'/>"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse navbar-static-top">
@@ -48,9 +54,5 @@
 <div class="container-fluid">
     <decorator:body/>
 </div>
-
-<script src="<c:url value='/assets/js/jquery-3.3.1.min.js'/>"></script>
-<script src="<c:url value='/assets/js/bootstrap.min.js'/>"></script>
-<script src="<c:url value='/assets/js/script.js'/>"></script>
 </body>
 </html>

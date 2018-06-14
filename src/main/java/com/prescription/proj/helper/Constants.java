@@ -12,12 +12,16 @@ public class Constants {
     public static final String LOGIN_PATH = "/login";
     public static final String HOME_PATH = "/home";
     public static final String REG_PATH = "/register";
-    public static final String PRESCRIPTION_PATH = "/writePrescription";
+    public static final String PRESCRIPTION_PATH = "/prescription";
+    public static final String DOCTOR_PATH = "/doctor";
+    public static final String ADD_DOCTOR_PATH = "/addDoctor";
     public static final String LOGOUT_PATH = "/logout";
 
     //Views
     public static final String LOGIN_VIEW = "login";
     public static final String REG_VIEW = "register";
+    public static final String DOCTOR_VIEW = "doctor";
+    public static final String ADD_DOCTOR_VIEW = "addDoctor";
 
     //Session Attributes
     public static final String USER = "user";

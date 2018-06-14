@@ -6,6 +6,7 @@ import com.prescription.proj.domain.LoginUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Objects;
 
 @Service
@@ -26,6 +27,10 @@ public class DoctorService {
         return doctorDao.getDoctorByUserName(userName);
     }
 
+    public boolean isDoctorExistsWithUniqueIdentifiers(Doctor doctor) {
+        return !doctorDao.getDoctorListWithUniqueIdentifiers(doctor).isEmpty();
+    }
+
     public boolean isAllowedDoctor(LoginUser user) {
         Doctor retrievedDoctor = getDoctorByUserName(user.getUserName());
 
@@ -34,5 +39,9 @@ public class DoctorService {
         }
 
         return retrievedDoctor.getPassword().equals(user.getPassword());
+    }
+
+    public List<Doctor> getAllDoctors() {
+        return doctorDao.getDoctors();
     }
 }

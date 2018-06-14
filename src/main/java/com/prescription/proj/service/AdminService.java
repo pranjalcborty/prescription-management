@@ -26,16 +26,16 @@ public class AdminService {
         return adminDao.countAdmin() == 0;
     }
 
-    public Admin getUserByUserName(String userName) {
-        return adminDao.getUserByUserName(userName);
+    public Admin getAdminByUserName(String userName) {
+        return adminDao.getAdminByUsername(userName);
     }
 
-    public boolean isUserExistsWithUniqueIdentifiers(Admin admin) {
-        return !adminDao.getUserListWithUniqueIdentifiers(admin).isEmpty();
+    public boolean isAdminExistsWithUniqueIdentifiers(Admin admin) {
+        return !adminDao.getAdminListWithUniqueIdentifiers(admin).isEmpty();
     }
 
     public boolean isAllowedUser(LoginUser user) {
-        Admin retrievedAdmin = getUserByUserName(user.getUserName());
+        Admin retrievedAdmin = getAdminByUserName(user.getUserName());
 
         if (Objects.isNull(retrievedAdmin)) {
             return false;
