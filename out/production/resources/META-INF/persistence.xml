@@ -8,9 +8,10 @@
     <persistence-unit name="jpa" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
+        <class>com.prescription.proj.domain.Admin</class>
+        <class>com.prescription.proj.domain.Doctor</class>
         <class>com.prescription.proj.domain.Patient</class>
         <class>com.prescription.proj.domain.Prescription</class>
-        <class>com.prescription.proj.domain.User</class>
 
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/prescription"/>
