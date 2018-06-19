@@ -1,5 +1,7 @@
 package com.prescription.proj.domain;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
@@ -17,10 +19,13 @@ public class Prescription implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER)
     private Doctor doctor;
 
+    @NotNull
     @ManyToOne(fetch = FetchType.EAGER)
     private Patient patient;
 
+    @Length(min = 5, max = 2000)
     private String prescriptionBody;
+
     private String dx;
     private String cc;
     private String oe;

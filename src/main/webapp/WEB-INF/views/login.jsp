@@ -53,7 +53,12 @@
                     </div>
 
                     <div class="text-right">
-                        <button type="submit" class="btn btn-success">Log in</button>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success">Log in</button>
+                        </div>
+                        <div class="form-group">
+                            <p style="font-size: 14px">Do not have an account? <a href="<c:url value="/register"/>">Sign up</a></p>
+                        </div>
                     </div>
                 </form:form>
             </div>

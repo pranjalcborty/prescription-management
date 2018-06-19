@@ -14,6 +14,7 @@
     <title><fmt:message key="label.register"/></title>
 </head>
 <body>
+
 <form:form modelAttribute="prescription" method="post">
     <div class="jumbotron">
         <div class="row">
@@ -69,10 +70,16 @@
                 <legend>Patient</legend>
                 <div class="form-group">
                     <form:select path="patient" cssClass="selectpicker" data-live-search="true">
+                        <form:option value="0" label="---Please Select---"/>
                         <form:options items="${patients}" itemValue="id" itemLabel="name"/>
                     </form:select>
                 </div>
-                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addPatient"><i class="fa fa-plus"></i> Add patient</button>
+                <form:errors path="patient" cssClass="error"/>
+                <p style="font-size: 14px">Patient not in the list ? <a data-toggle="modal" data-target="#addPatient">Add one</a></p>
+
+                <div class="pull-right">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </div>
             </div>
         </div>
     </div>
@@ -225,6 +232,11 @@
 
 <link rel="stylesheet" href="<c:url value='/assets/css/jquery-te-1.4.0.css'/>">
 <link rel="stylesheet" href="<c:url value='/assets/css/bootstrap-select.min.css'/>">
+<style>
+    a:hover {
+        cursor: pointer;
+    }
+</style>
 <script src="<c:url value='/assets/js/jquery-te-1.4.0.min.js'/>"></script>
 <script src="<c:url value='/assets/js/bootstrap-select.min.js'/>"></script>
 <script src="<c:url value='/assets/js/avro-v1.1.4.min.js'/>" type="text/javascript" charset="utf-8"></script>

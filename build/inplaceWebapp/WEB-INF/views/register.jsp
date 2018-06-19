@@ -16,6 +16,7 @@
 <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
         <div class="jumbotron">
+            <a href="<c:url value='/login'/>" class="btn btn-default"><i class="fa fa-arrow-left"></i><fmt:message key="label.back"/></a>
             <h3 class="text-center"><fmt:message key="label.signup"/></h3>
 
             <div class="error text-center">

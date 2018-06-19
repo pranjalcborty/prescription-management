@@ -36,7 +36,9 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<c:url value="/prescription"/>">Prescription</a></li>
+                <c:if test="${isDoctor}">
+                    <li><a href="<c:url value="/prescription"/>">Prescription</a></li>
+                </c:if>
                 <li><a href="<c:url value="/patient"/>">Patient</a></li>
                 <li><a href="<c:url value="/medicine"/>">Medicine</a></li>
                 <li><a href="<c:url value="/appointment"/>">Appointment</a></li>

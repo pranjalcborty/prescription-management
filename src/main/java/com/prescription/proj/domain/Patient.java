@@ -69,4 +69,19 @@ public class Patient implements Serializable {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof Patient) {
+            Patient other = (Patient) obj;
+            return this.id == other.getId();
+        }
+        return false;
+    }
 }

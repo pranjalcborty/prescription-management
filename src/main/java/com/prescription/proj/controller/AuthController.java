@@ -86,7 +86,8 @@ public class AuthController {
 
     @RequestMapping(value = REG_PATH, method = RequestMethod.GET)
     public String registerView(ModelMap model, HttpSession session) {
-        if (adminService.isNoAdmin() && isNull(session.getAttribute(USER))) {
+//        if (adminService.isNoAdmin() && isNull(session.getAttribute(USER))) {
+        if (isNull(session.getAttribute(USER))) {
             model.put(ADMIN, new Admin());
             return REG_VIEW;
         }

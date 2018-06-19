@@ -22,6 +22,11 @@ public class PatientDao {
     }
 
     @Transactional
+    public Patient getPatientById(long id) {
+        return em.find(Patient.class, id);
+    }
+
+    @Transactional
     public void save(Patient patient) {
         em.persist(patient);
     }
