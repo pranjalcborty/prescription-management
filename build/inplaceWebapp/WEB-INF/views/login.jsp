@@ -45,10 +45,10 @@
 
                     <div class="form-check">
                         <div>
-                            <form:radiobutton path="doctor" value="true"/> Doctor
+                            <form:radiobutton path="doctor" value="true"/> <label>Doctor</label>
                         </div>
                         <div>
-                            <form:radiobutton path="doctor" value="false"/> Admin
+                            <form:radiobutton path="doctor" value="false"/> <label>Admin</label>
                         </div>
                     </div>
 

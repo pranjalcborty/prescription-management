@@ -5,6 +5,7 @@ import com.prescription.proj.domain.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -22,6 +23,18 @@ public class PatientService {
     }
 
     public void save(Patient patient) {
-        patientDao.save(patient);
+        if (patient.getId() == 0) {
+            patientDao.save(patient);
+        } else {
+            patientDao.update(patient);
+        }
+    }
+
+    public Patient getPatientById(Long id) {
+        return patientDao.getPatientById(id);
+    }
+
+    public Integer countTodaysPatients() {
+        return patientDao.getPatientCount(new Date());
     }
 }

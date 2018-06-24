@@ -25,8 +25,8 @@
             </thead>
             <tbody>
             <c:forEach items="${prescriptions}" var="prescription">
-                <tr>
-                    <td><c:out value="${prescription.patient.id}"/></td>
+                <tr data-url="<c:url value='/createPrescription?prescriptionId=${prescription.id}'/>">
+                    <td><c:out value="${prescription.patient.regNum}"/></td>
                     <td><c:out value="${prescription.patient.name}"/></td>
                     <td><c:out value="${prescription.doctor.name}"/></td>
                     <td><c:out value="${prescription.createdOn}"/></td>
@@ -43,6 +43,10 @@
 <script>
     $(function () {
         $("#dataTable").DataTable();
+
+        $("#dataTable tbody tr").click(function () {
+            window.location.href = $(this).data("url");
+        });
     })
 </script>
 </body>

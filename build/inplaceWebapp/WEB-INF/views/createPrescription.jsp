@@ -16,6 +16,7 @@
 <body>
 
 <form:form modelAttribute="prescription" method="post">
+    <input type="hidden" name="id" value="${prescription.id}">
     <div class="jumbotron">
         <div class="row">
             <div class="col-xs-3">
@@ -53,16 +54,17 @@
 
             <div class="col-xs-6">
                 <legend>Prescription body</legend>
+
                 <form:textarea path="prescriptionBody" id="jqte"/>
                 <form:errors path="prescriptionBody" cssClass="error"/>
 
-                <div class="pull-left">
+                <div class="pull-right">
                     <button type="button" class="btn btn-danger" onclick="$('#jqte').jqteVal('');">
                         <i class="fas fa-times"></i> Clear All</button>
-                </div>
-                <div class="pull-right">
-                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#med">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#med">
                         <i class="fas fa-plus"></i> Add medicine</button>
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-save"></i> Save Prescription</button>
                 </div>
             </div>
 
@@ -75,11 +77,6 @@
                     </form:select>
                 </div>
                 <form:errors path="patient" cssClass="error"/>
-                <p style="font-size: 14px">Patient not in the list ? <a data-toggle="modal" data-target="#addPatient">Add one</a></p>
-
-                <div class="pull-right">
-                    <button type="submit" class="btn btn-primary">Save</button>
-                </div>
             </div>
         </div>
     </div>
@@ -184,47 +181,6 @@
 
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="addPatient" class="modal fade" role="dialog">
-    <div class="modal-dialog modal-sm">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Add patient</h4>
-            </div>
-
-            <div class="modal-body">
-                <form action="addPatient" method="post" name="patientForm">
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" name="name" class="form-control">
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <div class="form-group">
-                                <label>Sex</label>
-                                <input type="text" name="sex" class="form-control">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Address</label>
-                        <textarea name="address" class="form-control"></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Phone no.</label>
-                        <input type="text" name="phone" class="form-control">
-                    </div>
-
-                    <button id="patientSubmit" type="submit" class="btn btn-success">Add</button>
-                </form>
             </div>
         </div>
     </div>

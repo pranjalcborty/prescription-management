@@ -63,7 +63,6 @@ public class PrescriptionController {
     @RequestMapping(value = CREATE_PRESCRIPTION_PATH, method = RequestMethod.POST)
     public String savePrescription(@Valid @ModelAttribute(PRESCRIPTION) Prescription prescription,
                                    BindingResult result,
-                                   @RequestParam(defaultValue = "0") Long prescriptionId,
                                    HttpSession session,
                                    ModelMap model) {
         if (result.hasErrors()) {
@@ -73,24 +72,7 @@ public class PrescriptionController {
         }
 
         prescriptionService.save(prescription, session);
-        return "success";
-    }
-
-    @PostMapping(value = "/addPatient", produces = { MediaType.APPLICATION_JSON_VALUE })
-    @ResponseBody
-    public PatientJsonResponse addPatient(@Valid @ModelAttribute Patient patient, BindingResult result) {
-        PatientJsonResponse response = new PatientJsonResponse();
-
-        if (result.hasErrors()) {
-            response.setValidated(false);
-            response.setErrorMessages(result.getFieldErrors().stream().collect(
-                    Collectors.toMap(FieldError::getField, FieldError::getDefaultMessage)));
-        } else {
-            response.setValidated(true);
-            patientService.save(patient);
-        }
-
-        return response;
+        return redirectTo(PRESCRIPTION_PATH);
     }
 
     private Prescription getPrescription(Long id) {

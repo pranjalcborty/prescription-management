@@ -2,8 +2,11 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    color: white;
     font-family: 'Lora', serif;
+}
+
+.container-fluid, #dataTable {
+    color: white;
 }
 
 .navbar-inverse, .jumbotron {
@@ -26,4 +29,8 @@ legend {
 
 .error {
     color: red !important;
+}
+
+tr:hover {
+    cursor: pointer;
 }

@@ -13,7 +13,9 @@ public class Constants {
     public static final String HOME_PATH = "/home";
     public static final String REG_PATH = "/register";
     public static final String PRESCRIPTION_PATH = "/prescription";
+    public static final String PATIENT_PATH = "/patient";
     public static final String CREATE_PRESCRIPTION_PATH = "/createPrescription";
+    public static final String CREATE_PATIENT_PATH = "/createPatient";
     public static final String DOCTOR_PATH = "/doctor";
     public static final String ADD_DOCTOR_PATH = "/addDoctor";
     public static final String LOGOUT_PATH = "/logout";
@@ -22,6 +24,8 @@ public class Constants {
     public static final String LOGIN_VIEW = "login";
     public static final String REG_VIEW = "register";
     public static final String DOCTOR_VIEW = "doctor";
+    public static final String PATIENT_VIEW = "patient";
+    public static final String CREATE_PATIENT_VIEW = "createPatient";
     public static final String ADD_DOCTOR_VIEW = "addDoctor";
     public static final String PRESCRIPTION_VIEW = "prescription";
     public static final String CREATE_PRESCRIPTION_VIEW = "createPrescription";
@@ -31,11 +35,11 @@ public class Constants {
     public static final String ADMIN = "admin";
     public static final String DOCTOR = "doctor";
     public static final String PATIENT = "patient";
+    public static final String PATIENTS = "patients";
     public static final String DOCTORS = "doctors";
     public static final String IS_DOCTOR = "isDoctor";
     public static final String PRESCRIPTION = "prescription";
     public static final String PRESCRIPTIONS = "prescriptions";
-    public static final String PATIENTS = "patients";
 
     public static String redirectTo(String path) {
         return "redirect:" + path;
