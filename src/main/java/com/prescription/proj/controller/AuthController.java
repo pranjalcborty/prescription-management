@@ -1,9 +1,8 @@
 package com.prescription.proj.controller;
 
-import com.prescription.proj.domain.Admin;
 import com.prescription.proj.domain.LoginUser;
-import com.prescription.proj.service.DoctorService;
-import com.prescription.proj.service.AdminService;
+import com.prescription.proj.domain.User;
+import com.prescription.proj.service.UserService;
 import com.prescription.proj.web.validator.AuthValidator;
 import com.prescription.proj.web.validator.RegistrationValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,20 +29,16 @@ public class AuthController {
 
     private final AuthValidator authValidator;
     private final RegistrationValidator regValidator;
-
-    private final AdminService adminService;
-    private final DoctorService doctorService;
+    private final UserService userService;
 
     @Autowired
     public AuthController(AuthValidator authValidator,
                           RegistrationValidator regValidator,
-                          AdminService adminService,
-                          DoctorService doctorService) {
+                          UserService userService) {
 
         this.authValidator = authValidator;
         this.regValidator = regValidator;
-        this.adminService = adminService;
-        this.doctorService = doctorService;
+        this.userService = userService;
     }
 
     @InitBinder(LOGIN_USER)
@@ -51,7 +46,7 @@ public class AuthController {
         binder.addValidators(authValidator);
     }
 
-    @InitBinder(ADMIN)
+    @InitBinder(USER)
     public void regBinder(WebDataBinder binder) {
         binder.addValidators(regValidator);
     }
@@ -69,26 +64,19 @@ public class AuthController {
     @RequestMapping(value = LOGIN_PATH, method = RequestMethod.POST)
     public String login(@Valid @ModelAttribute(LOGIN_USER) LoginUser user, BindingResult result,
                         ModelMap model, HttpSession session) {
-         if (result.hasErrors()) {
-             model.put(LOGIN_USER, user);
-             return LOGIN_VIEW;
-         }
+        if (result.hasErrors()) {
+            model.put(LOGIN_USER, user);
+            return LOGIN_VIEW;
+        }
 
-         session.setAttribute(USER,
-                 (user.isDoctor()
-                         ? doctorService.getDoctorByUserName(user.getUserName())
-                         : adminService.getAdminByUserName(user.getUserName())));
-
-         session.setAttribute(IS_DOCTOR, user.isDoctor());
-
-         return redirectTo(HOME_PATH);
+        session.setAttribute(USER, userService.getUserByUserName(user.getUserName()));
+        return redirectTo(HOME_PATH);
     }
 
     @RequestMapping(value = REG_PATH, method = RequestMethod.GET)
     public String registerView(ModelMap model, HttpSession session) {
-//        if (adminService.isNoAdmin() && isNull(session.getAttribute(USER))) {
         if (isNull(session.getAttribute(USER))) {
-            model.put(ADMIN, new Admin());
+            model.put(USER, new User());
             return REG_VIEW;
         }
 
@@ -96,13 +84,14 @@ public class AuthController {
     }
 
     @RequestMapping(value = REG_PATH, method = RequestMethod.POST)
-    public String register(@Valid @ModelAttribute(ADMIN) Admin admin, BindingResult result, ModelMap model) {
+    public String register(@Valid @ModelAttribute(USER) User user, BindingResult result, ModelMap model) {
         if (result.hasErrors()) {
-            model.put(ADMIN, admin);
+            model.put(USER, user);
             return REG_VIEW;
         }
 
-        adminService.save(admin);
+        user.setRole(User.Role.ADMIN);
+        userService.save(user);
         return redirectTo(LOGIN_PATH);
     }
 
@@ -110,7 +99,6 @@ public class AuthController {
     public String logout(SessionStatus status, HttpSession session) {
         status.setComplete();
         session.removeAttribute(USER);
-        session.removeAttribute(IS_DOCTOR);
 
         return redirectTo(LOGIN_PATH);
     }

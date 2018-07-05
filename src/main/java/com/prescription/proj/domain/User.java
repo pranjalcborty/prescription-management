@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
-@MappedSuperclass
+@Entity
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -40,10 +40,12 @@ public class User implements Serializable {
     @Length(max = 15)
     private String phone;
 
-    @Transient
-    private String customId;
+    @Length(max = 30)
+    private String specialization;
 
     private Date createdOn;
+
+    private Role role;
 
     public String getName() {
         return name;
@@ -85,12 +87,12 @@ public class User implements Serializable {
         this.phone = phone;
     }
 
-    public String getCustomId() {
-        return customId;
+    public String getSpecialization() {
+        return specialization;
     }
 
-    public void setCustomId(String customId) {
-        this.customId = customId;
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
     }
 
     public Date getCreatedOn() {
@@ -99,5 +101,17 @@ public class User implements Serializable {
 
     public void setCreatedOn(Date createdOn) {
         this.createdOn = createdOn;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public enum Role {
+        RECEPTIONIST, REFERRER, DOCTOR, PATHOLOGIST, PHARMACIST, ADMIN
     }
 }

@@ -1,30 +1,20 @@
 package com.prescription.proj.controller;
 
 import com.prescription.proj.dao.PatientDao;
-import com.prescription.proj.domain.Doctor;
 import com.prescription.proj.domain.Patient;
-import com.prescription.proj.domain.PatientJsonResponse;
 import com.prescription.proj.domain.Prescription;
-import com.prescription.proj.helper.Constants;
 import com.prescription.proj.service.PatientService;
 import com.prescription.proj.service.PrescriptionService;
 import com.prescription.proj.web.editor.PatientEditor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
-
-import java.util.List;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
 import static com.prescription.proj.helper.Constants.*;
 
