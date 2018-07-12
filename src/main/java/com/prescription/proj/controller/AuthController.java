@@ -69,7 +69,9 @@ public class AuthController {
             return LOGIN_VIEW;
         }
 
-        session.setAttribute(USER, userService.getUserByUserName(user.getUserName()));
+        User currentUser = userService.getUserByUserName(user.getUserName());
+        session.setAttribute(USER, currentUser);
+        session.setAttribute(ROLE, currentUser.getRole());
         return redirectTo(HOME_PATH);
     }
 
@@ -99,6 +101,7 @@ public class AuthController {
     public String logout(SessionStatus status, HttpSession session) {
         status.setComplete();
         session.removeAttribute(USER);
+        session.removeAttribute(ROLE);
 
         return redirectTo(LOGIN_PATH);
     }

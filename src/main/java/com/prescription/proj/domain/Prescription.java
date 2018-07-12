@@ -17,7 +17,7 @@ public class Prescription implements Serializable {
     private long id;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    private Doctor doctor;
+    private User doctor;
 
     @NotNull
     @ManyToOne(fetch = FetchType.EAGER)
@@ -42,11 +42,11 @@ public class Prescription implements Serializable {
         this.id = id;
     }
 
-    public Doctor getDoctor() {
+    public User getDoctor() {
         return doctor;
     }
 
-    public void setDoctor(Doctor doctor) {
+    public void setDoctor(User doctor) {
         this.doctor = doctor;
     }
 

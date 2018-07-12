@@ -43,15 +43,6 @@
                         </div>
                     </div>
 
-                    <div class="form-check">
-                        <div>
-                            <form:radiobutton path="doctor" value="true"/> <label>Doctor</label>
-                        </div>
-                        <div>
-                            <form:radiobutton path="doctor" value="false"/> <label>Admin</label>
-                        </div>
-                    </div>
-
                     <div class="text-right">
                         <div class="form-group">
                             <button type="submit" class="btn btn-success">Log in</button>

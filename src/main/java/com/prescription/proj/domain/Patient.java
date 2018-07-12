@@ -43,6 +43,11 @@ public class Patient implements Serializable {
     @Length(max = 3000)
     private String remarks;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    private User createdBy;
+
+    private Date createdOn;
+
     public long getId() {
         return id;
     }
@@ -137,6 +142,22 @@ public class Patient implements Serializable {
 
     public void setRemarks(String remarks) {
         this.remarks = remarks;
+    }
+
+    public User getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(User createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public Date getCreatedOn() {
+        return createdOn;
+    }
+
+    public void setCreatedOn(Date createdOn) {
+        this.createdOn = createdOn;
     }
 
     @Override

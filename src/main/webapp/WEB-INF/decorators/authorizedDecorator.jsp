@@ -36,16 +36,23 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <c:if test="${isDoctor}">
                     <li><a href="<c:url value="/prescription"/>">Prescription</a></li>
-                </c:if>
                 <li><a href="<c:url value="/patient"/>">Patient</a></li>
-                <li><a href="<c:url value="/medicine"/>">Medicine</a></li>
-                <li><a href="<c:url value="/appointment"/>">Appointment</a></li>
 
-                <c:if test="${not isDoctor}">
-                    <li><a href="<c:url value="/doctor"/>">Doctor</a></li>
-                    <li><a href="<c:url value="/admin"/>">Admin</a></li>
+                <c:if test="${currentRole == 'ADMIN'}">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Users <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="<c:url value="/users?role=RECEPTIONIST"/>">Receptionist</a></li>
+                            <li><a class="dropdown-item" href="<c:url value="/users?role=REFERRER"/>">Referrer</a></li>
+                            <li><a class="dropdown-item" href="<c:url value="/users?role=DOCTOR"/>">Doctor</a></li>
+                            <li><a class="dropdown-item" href="<c:url value="/users?role=PATHOLOGIST"/>">Pathologist</a></li>
+                            <li><a class="dropdown-item" href="<c:url value="/users?role=PHARMACIST"/>">Pharmacist</a></li>
+                            <li><a class="dropdown-item" href="<c:url value="/users?role=ADMIN"/>">Admin</a></li>
+                        </ul>
+                    </li>
                 </c:if>
 
                 <li><a href="<c:url value="/logout"/>">Logout</a></li>

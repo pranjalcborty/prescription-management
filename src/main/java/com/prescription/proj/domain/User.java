@@ -112,6 +112,21 @@ public class User implements Serializable {
     }
 
     public enum Role {
-        RECEPTIONIST, REFERRER, DOCTOR, PATHOLOGIST, PHARMACIST, ADMIN
+        RECEPTIONIST("Receptionist"), REFERRER("Referrer"), DOCTOR("Doctor"),
+        PATHOLOGIST("Pathologist"), PHARMACIST("Pharmacist"), ADMIN("Admin");
+
+        private String name;
+
+        Role (String name) {
+            this.name = name;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
     }
 }

@@ -53,8 +53,8 @@ public class PrescriptionController {
     @RequestMapping(value = CREATE_PRESCRIPTION_PATH, method = RequestMethod.POST)
     public String savePrescription(@Valid @ModelAttribute(PRESCRIPTION) Prescription prescription,
                                    BindingResult result,
-                                   HttpSession session,
-                                   ModelMap model) {
+                                   ModelMap model,
+                                   HttpSession session) {
         if (result.hasErrors()) {
             model.addAttribute(PRESCRIPTION, prescription);
             model.addAttribute(PATIENTS, patientService.getAllPatients());

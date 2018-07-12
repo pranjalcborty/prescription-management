@@ -37,6 +37,6 @@ public class LoggedInFilter implements Filter {
     }
 
     private boolean isLoggedIn(HttpSession session) {
-        return !isNull(session.getAttribute(USER));
+        return !isNull(getUser(session));
     }
 }

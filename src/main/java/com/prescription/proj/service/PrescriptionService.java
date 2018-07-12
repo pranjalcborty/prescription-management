@@ -1,14 +1,14 @@
 package com.prescription.proj.service;
 
 import com.prescription.proj.dao.PrescriptionDao;
-import com.prescription.proj.domain.Doctor;
 import com.prescription.proj.domain.Prescription;
-import com.prescription.proj.helper.Constants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
+
+import static com.prescription.proj.helper.Constants.getUser;
 
 @Service
 public class PrescriptionService {
@@ -32,7 +32,7 @@ public class PrescriptionService {
         if (prescription.getId() != 0) {
             prescriptionDao.update(prescription);
         } else {
-            prescription.setDoctor((Doctor) session.getAttribute(Constants.USER));
+            prescription.setDoctor(getUser(session));
             prescriptionDao.save(prescription);
         }
     }

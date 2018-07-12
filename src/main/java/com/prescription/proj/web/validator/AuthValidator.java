@@ -26,7 +26,7 @@ public class AuthValidator implements Validator {
     public void validate(Object target, Errors errors) {
         LoginUser user = (LoginUser) target;
 
-        if (userService.isAllowedUser(user)) {
+        if (!userService.isAllowedUser(user)) {
             errors.reject("error.user.invalid");
         }
     }

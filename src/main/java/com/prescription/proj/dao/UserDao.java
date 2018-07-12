@@ -1,7 +1,6 @@
 package com.prescription.proj.dao;
 
 import com.prescription.proj.domain.User;
-import com.prescription.proj.domain.User;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

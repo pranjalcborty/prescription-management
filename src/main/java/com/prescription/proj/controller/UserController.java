@@ -1,6 +1,7 @@
 package com.prescription.proj.controller;
 
 import com.prescription.proj.domain.User;
+import com.prescription.proj.helper.Constants;
 import com.prescription.proj.service.UserService;
 import com.prescription.proj.web.validator.RegistrationValidator;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import static com.prescription.proj.helper.Constants.*;
@@ -34,11 +36,16 @@ public class UserController {
     @RequestMapping(value = USER_LIST_PATH, method = RequestMethod.GET)
     public String view(@RequestParam User.Role role, ModelMap model) {
         model.addAttribute(USERS, userService.getAllUsers(role));
-        return DOCTOR_VIEW;
+        model.addAttribute("role", role);
+        return USERS_LIST_VIEW;
     }
 
     @RequestMapping(value = ADD_USER_PATH, method = RequestMethod.GET)
-    public String addView(ModelMap model) {
+    public String addView(@RequestParam User.Role role, ModelMap model, HttpSession session) {
+        if (notHasRole(session, creationAuthority.get(role))) {
+            return FAIL_VIEW;
+        }
+
         model.addAttribute(USER, new User());
         return ADD_USER_VIEW;
     }
@@ -46,7 +53,12 @@ public class UserController {
     @RequestMapping(value = ADD_USER_PATH, method = RequestMethod.POST)
     public String add(@Valid @ModelAttribute(USER) User user, BindingResult result,
                       @RequestParam User.Role role,
-                      ModelMap model) {
+                      ModelMap model,
+                      HttpSession session) {
+        if (notHasRole(session, creationAuthority.get(role))) {
+            return FAIL_VIEW;
+        }
+
         if (result.hasErrors()) {
             model.addAttribute(USER, user);
             return ADD_USER_VIEW;

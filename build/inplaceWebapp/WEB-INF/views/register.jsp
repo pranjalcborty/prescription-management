@@ -23,7 +23,7 @@
                 <form:errors path="user"/>
             </div>
 
-            <form:form modelAttribute="admin" method="post">
+            <form:form modelAttribute="user" method="post">
                 <div class="form-group">
                     <label><fmt:message key="label.userName"/></label>
                     <form:input path="userName" type="text" class="form-control"/>

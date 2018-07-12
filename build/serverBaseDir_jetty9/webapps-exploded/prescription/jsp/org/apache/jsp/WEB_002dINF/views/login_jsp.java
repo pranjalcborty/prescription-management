@@ -14,7 +14,6 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_errors_path_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_fmt_message_key_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_form_modelAttribute_method;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_radiobutton_value_path_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_url_value_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_input_type_path_class_nobody;
 
@@ -28,7 +27,6 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_tagPool_form_errors_path_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_fmt_message_key_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_form_form_modelAttribute_method = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_form_radiobutton_value_path_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_c_url_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_form_input_type_path_class_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
@@ -37,7 +35,6 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_tagPool_form_errors_path_nobody.release();
     _jspx_tagPool_fmt_message_key_nobody.release();
     _jspx_tagPool_form_form_modelAttribute_method.release();
-    _jspx_tagPool_form_radiobutton_value_path_nobody.release();
     _jspx_tagPool_c_url_value_nobody.release();
     _jspx_tagPool_form_input_type_path_class_nobody.release();
   }
@@ -217,21 +214,6 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                        </div>\r\n");
           out.write("                    </div>\r\n");
           out.write("\r\n");
-          out.write("                    <div class=\"form-check\">\r\n");
-          out.write("                        <div>\r\n");
-          out.write("                            ");
-          if (_jspx_meth_form_radiobutton_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_form_form_0, _jspx_page_context, _jspx_push_body_count_form_form_0))
-            return true;
-          out.write(" <label>Doctor</label>\r\n");
-          out.write("                        </div>\r\n");
-          out.write("                        <div>\r\n");
-          out.write("                            ");
-          if (_jspx_meth_form_radiobutton_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_form_form_0, _jspx_page_context, _jspx_push_body_count_form_form_0))
-            return true;
-          out.write(" <label>Admin</label>\r\n");
-          out.write("                        </div>\r\n");
-          out.write("                    </div>\r\n");
-          out.write("\r\n");
           out.write("                    <div class=\"text-right\">\r\n");
           out.write("                        <div class=\"form-group\">\r\n");
           out.write("                            <button type=\"submit\" class=\"btn btn-success\">Log in</button>\r\n");
@@ -351,60 +333,6 @@ public final class login_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspx_th_form_input_1.doFinally();
       _jspx_tagPool_form_input_type_path_class_nobody.reuse(_jspx_th_form_input_1);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_form_radiobutton_0(javax.servlet.jsp.tagext.JspTag _jspx_th_form_form_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_form_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  form:radiobutton
-    org.springframework.web.servlet.tags.form.RadioButtonTag _jspx_th_form_radiobutton_0 = (org.springframework.web.servlet.tags.form.RadioButtonTag) _jspx_tagPool_form_radiobutton_value_path_nobody.get(org.springframework.web.servlet.tags.form.RadioButtonTag.class);
-    _jspx_th_form_radiobutton_0.setPageContext(_jspx_page_context);
-    _jspx_th_form_radiobutton_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_0);
-    _jspx_th_form_radiobutton_0.setPath("doctor");
-    _jspx_th_form_radiobutton_0.setValue(new String("true"));
-    int[] _jspx_push_body_count_form_radiobutton_0 = new int[] { 0 };
-    try {
-      int _jspx_eval_form_radiobutton_0 = _jspx_th_form_radiobutton_0.doStartTag();
-      if (_jspx_th_form_radiobutton_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_form_radiobutton_0[0]-- > 0)
-        out = _jspx_page_context.popBody();
-      _jspx_th_form_radiobutton_0.doCatch(_jspx_exception);
-    } finally {
-      _jspx_th_form_radiobutton_0.doFinally();
-      _jspx_tagPool_form_radiobutton_value_path_nobody.reuse(_jspx_th_form_radiobutton_0);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_form_radiobutton_1(javax.servlet.jsp.tagext.JspTag _jspx_th_form_form_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_form_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  form:radiobutton
-    org.springframework.web.servlet.tags.form.RadioButtonTag _jspx_th_form_radiobutton_1 = (org.springframework.web.servlet.tags.form.RadioButtonTag) _jspx_tagPool_form_radiobutton_value_path_nobody.get(org.springframework.web.servlet.tags.form.RadioButtonTag.class);
-    _jspx_th_form_radiobutton_1.setPageContext(_jspx_page_context);
-    _jspx_th_form_radiobutton_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_0);
-    _jspx_th_form_radiobutton_1.setPath("doctor");
-    _jspx_th_form_radiobutton_1.setValue(new String("false"));
-    int[] _jspx_push_body_count_form_radiobutton_1 = new int[] { 0 };
-    try {
-      int _jspx_eval_form_radiobutton_1 = _jspx_th_form_radiobutton_1.doStartTag();
-      if (_jspx_th_form_radiobutton_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_form_radiobutton_1[0]-- > 0)
-        out = _jspx_page_context.popBody();
-      _jspx_th_form_radiobutton_1.doCatch(_jspx_exception);
-    } finally {
-      _jspx_th_form_radiobutton_1.doFinally();
-      _jspx_tagPool_form_radiobutton_value_path_nobody.reuse(_jspx_th_form_radiobutton_1);
     }
     return false;
   }
