@@ -16,16 +16,17 @@ public class UserDao {
     private EntityManager em;
 
     @Transactional
-    public User getUserByUserName(String userName) {
+    public User getUser(String userName) {
         String jpql = "SELECT d FROM User d WHERE d.userName LIKE :userName";
 
-        try {
-            return em.createQuery(jpql, User.class)
-                    .setParameter("userName", userName)
-                    .getSingleResult();
-        } catch (NoResultException e) {
-            return null;
-        }
+        return em.createQuery(jpql, User.class)
+                .setParameter("userName", userName)
+                .getSingleResult();
+    }
+
+    @Transactional
+    public User getUser(long id) {
+        return em.find(User.class, id);
     }
 
     public List<User> getUserListWithUniqueIdentifiers(User User) {

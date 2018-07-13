@@ -2,7 +2,6 @@ package com.prescription.proj.controller;
 
 import com.prescription.proj.domain.Patient;
 import com.prescription.proj.domain.User;
-import com.prescription.proj.helper.Constants;
 import com.prescription.proj.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
@@ -44,7 +43,7 @@ public class PatientController {
 
     @RequestMapping(value = CREATE_PATIENT_PATH, method = RequestMethod.GET)
     public String createView(@RequestParam(defaultValue = "0") Long patientId, ModelMap model, HttpSession session) {
-        if (notHasRole(session, User.Role.RECEPTIONIST)) {
+        if (notHasRole(User.Role.RECEPTIONIST)) {
             return FAIL_VIEW;
         }
 
@@ -55,7 +54,7 @@ public class PatientController {
     @RequestMapping(value = CREATE_PATIENT_PATH, method = RequestMethod.POST)
     public String add(@Valid @ModelAttribute(PATIENT) Patient patient, BindingResult result,
                       ModelMap model, HttpSession session) {
-        if (notHasRole(session, User.Role.RECEPTIONIST)) {
+        if (notHasRole(User.Role.RECEPTIONIST)) {
             return FAIL_VIEW;
         }
 
@@ -69,6 +68,6 @@ public class PatientController {
     }
 
     private Patient getPatient(Long id) {
-        return id == 0 ? new Patient() : patientService.getPatientById(id);
+        return id == 0 ? new Patient() : patientService.getPatient(id);
     }
 }

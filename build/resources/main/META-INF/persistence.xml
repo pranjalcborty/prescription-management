@@ -11,6 +11,7 @@
         <class>com.prescription.proj.domain.User</class>
         <class>com.prescription.proj.domain.Patient</class>
         <class>com.prescription.proj.domain.Prescription</class>
+        <class>com.prescription.proj.domain.Appointment</class>
 
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/prescription"/>

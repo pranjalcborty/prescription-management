@@ -69,7 +69,7 @@ public class AuthController {
             return LOGIN_VIEW;
         }
 
-        User currentUser = userService.getUserByUserName(user.getUserName());
+        User currentUser = userService.getUser(user.getUserName());
         session.setAttribute(USER, currentUser);
         session.setAttribute(ROLE, currentUser.getRole());
         return redirectTo(HOME_PATH);

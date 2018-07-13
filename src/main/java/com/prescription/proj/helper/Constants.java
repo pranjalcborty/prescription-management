@@ -1,6 +1,8 @@
 package com.prescription.proj.helper;
 
 import com.prescription.proj.domain.User;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpSession;
 import java.util.Collections;
@@ -9,6 +11,7 @@ import java.util.Map;
 
 import static com.prescription.proj.domain.User.Role.*;
 import static java.util.Arrays.stream;
+import static org.springframework.web.context.request.RequestContextHolder.currentRequestAttributes;
 
 public class Constants {
 
@@ -38,10 +41,12 @@ public class Constants {
     public static final String ADD_USER_PATH = "/addUser";
 
     public static final String PRESCRIPTION_PATH = "/prescription";
+    public static final String APPOINTMENT_PATH = "/appointment";
     public static final String PATIENT_PATH = "/patient";
     public static final String USER_LIST_PATH = "/users";
 
     public static final String CREATE_PRESCRIPTION_PATH = "/createPrescription";
+    public static final String CREATE_APPOINTMENT_PATH = "/createAppointment";
 
     //Views
     public static final String LOGIN_VIEW = "login";
@@ -51,16 +56,20 @@ public class Constants {
     public static final String CREATE_PATIENT_VIEW = "createPatient";
     public static final String ADD_USER_VIEW = "addUser";
     public static final String PRESCRIPTION_VIEW = "prescription";
+    public static final String APPOINTMENTS_VIEW = "appointments";
     public static final String CREATE_PRESCRIPTION_VIEW = "createPrescription";
+    public static final String CREATE_APPOINTMENT_VIEW = "createAppointment";
     public static final String FAIL_VIEW = "failPage";
 
     //Session Attributes
     public static final String USER = "user";
     public static final String ROLE = "currentRole";
     public static final String PATIENT = "patient";
+    public static final String APPOINTMENT = "appointment";
+    public static final String APPOINTMENTS = "appointments";
     public static final String PATIENTS = "patients";
-    public static final String DOCTORS = "doctors";
     public static final String USERS = "users";
+    public static final String DOCTORS = "doctors";
     public static final String PRESCRIPTION = "prescription";
     public static final String PRESCRIPTIONS = "prescriptions";
 
@@ -72,12 +81,23 @@ public class Constants {
         return (User) session.getAttribute(USER);
     }
 
+    public static User getUser() {
+        return getUser(getSession());
+    }
+    public static User.Role getRole() {
+        return getUser().getRole();
+    }
+
+    public static HttpSession getSession() {
+        return ((ServletRequestAttributes) currentRequestAttributes()).getRequest().getSession();
+    }
+
     public static String urlAddParams(String url, String paramName, String paramValue) {
         return url + (url.contains("?") ? "&" : "?") + paramName + "=" + paramValue;
     }
 
-    public static boolean notHasRole(HttpSession session, User.Role... roles) {
-        User user = getUser(session);
+    public static boolean notHasRole(User.Role... roles) {
+        User user = getUser();
         return stream(roles).noneMatch(role -> user.getRole().equals(role));
     }
 }

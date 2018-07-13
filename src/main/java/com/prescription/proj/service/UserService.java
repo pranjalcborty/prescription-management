@@ -3,7 +3,6 @@ package com.prescription.proj.service;
 import com.prescription.proj.dao.UserDao;
 import com.prescription.proj.domain.User;
 import com.prescription.proj.domain.LoginUser;
-import com.prescription.proj.domain.User;
 import com.prescription.proj.domain.User.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,8 +24,12 @@ public class UserService {
         userDao.save(user);
     }
 
-    public User getUserByUserName(String userName) {
-        return userDao.getUserByUserName(userName);
+    public User getUser(String userName) {
+        return userDao.getUser(userName);
+    }
+
+    public User getUser(long id) {
+        return userDao.getUser(id);
     }
 
     public boolean isUserExistsWithUniqueIdentifiers(User User) {
@@ -34,7 +37,7 @@ public class UserService {
     }
 
     public boolean isAllowedUser(LoginUser user) {
-        User retrievedUser = getUserByUserName(user.getUserName());
+        User retrievedUser = getUser(user.getUserName());
 
         if (Objects.isNull(retrievedUser)) {
             return false;

@@ -24,7 +24,7 @@ public class PatientDao {
     }
 
     @Transactional
-    public Patient getPatientById(long id) {
+    public Patient getPatient(long id) {
         return em.find(Patient.class, id);
     }
 

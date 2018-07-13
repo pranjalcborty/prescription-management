@@ -41,8 +41,8 @@ public class UserController {
     }
 
     @RequestMapping(value = ADD_USER_PATH, method = RequestMethod.GET)
-    public String addView(@RequestParam User.Role role, ModelMap model, HttpSession session) {
-        if (notHasRole(session, creationAuthority.get(role))) {
+    public String addView(@RequestParam User.Role role, ModelMap model) {
+        if (notHasRole(creationAuthority.get(role))) {
             return FAIL_VIEW;
         }
 
@@ -53,9 +53,8 @@ public class UserController {
     @RequestMapping(value = ADD_USER_PATH, method = RequestMethod.POST)
     public String add(@Valid @ModelAttribute(USER) User user, BindingResult result,
                       @RequestParam User.Role role,
-                      ModelMap model,
-                      HttpSession session) {
-        if (notHasRole(session, creationAuthority.get(role))) {
+                      ModelMap model) {
+        if (notHasRole(creationAuthority.get(role))) {
             return FAIL_VIEW;
         }
 

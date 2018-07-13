@@ -1,16 +1,16 @@
 package com.prescription.proj.web.editor;
 
 import com.prescription.proj.dao.PatientDao;
-import com.prescription.proj.domain.Patient;
+import com.prescription.proj.service.PatientService;
 
 import java.beans.PropertyEditorSupport;
 
 public class PatientEditor extends PropertyEditorSupport {
 
-    private PatientDao patientDao;
+    private PatientService service;
 
-    public PatientEditor(PatientDao patientDao) {
-        this.patientDao = patientDao;
+    public PatientEditor(PatientService service) {
+        this.service = service;
     }
 
     @Override
@@ -20,8 +20,7 @@ public class PatientEditor extends PropertyEditorSupport {
         if (id == 0) {
             setValue(null);
         } else {
-            setValue(patientDao.getPatientById(id));
+            setValue(service.getPatient(id));
         }
     }
-
 }

@@ -111,6 +111,21 @@ public class User implements Serializable {
         this.role = role;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (this == obj) {
+            return true;
+        }
+        if (obj instanceof User) {
+            User other = (User) obj;
+            return this.id == other.getId();
+        }
+        return false;
+    }
+
     public enum Role {
         RECEPTIONIST("Receptionist"), REFERRER("Referrer"), DOCTOR("Doctor"),
         PATHOLOGIST("Pathologist"), PHARMACIST("Pharmacist"), ADMIN("Admin");
