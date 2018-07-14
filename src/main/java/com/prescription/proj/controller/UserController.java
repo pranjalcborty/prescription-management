@@ -41,8 +41,8 @@ public class UserController {
     }
 
     @RequestMapping(value = ADD_USER_PATH, method = RequestMethod.GET)
-    public String addView(@RequestParam User.Role role, ModelMap model) {
-        if (notHasRole(creationAuthority.get(role))) {
+    public String addView(ModelMap model) {
+        if (notHasRole(User.Role.ADMIN)) {
             return FAIL_VIEW;
         }
 
@@ -54,7 +54,7 @@ public class UserController {
     public String add(@Valid @ModelAttribute(USER) User user, BindingResult result,
                       @RequestParam User.Role role,
                       ModelMap model) {
-        if (notHasRole(creationAuthority.get(role))) {
+        if (notHasRole(User.Role.ADMIN)) {
             return FAIL_VIEW;
         }
 

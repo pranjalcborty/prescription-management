@@ -48,9 +48,9 @@ public class PrescriptionController {
 
     @RequestMapping(value = CREATE_PRESCRIPTION_PATH, method = RequestMethod.GET)
     public String createView(@RequestParam(defaultValue = "0") Long prescriptionId,
-                             @RequestParam(required = false) Long appointmentId,
+                             @RequestParam(defaultValue = "0") Long appointmentId,
                              ModelMap model) {
-        if (notHasRole(User.Role.DOCTOR)) {
+        if (notHasRole(User.Role.DOCTOR, User.Role.ADMIN)) {
             return FAIL_VIEW;
         }
 
@@ -61,11 +61,10 @@ public class PrescriptionController {
 
     @RequestMapping(value = CREATE_PRESCRIPTION_PATH, method = RequestMethod.POST)
     public String savePrescription(@Valid @ModelAttribute(PRESCRIPTION) Prescription prescription,
-                                   @RequestParam(required = false) Long appointmentId,
                                    BindingResult result,
-                                   ModelMap model,
-                                   HttpSession session) {
-        if (notHasRole(User.Role.DOCTOR)) {
+                                   @RequestParam(defaultValue = "0") Long appointmentId,
+                                   ModelMap model) {
+        if (notHasRole(User.Role.DOCTOR, User.Role.ADMIN)) {
             return FAIL_VIEW;
         }
 
@@ -82,7 +81,11 @@ public class PrescriptionController {
     private Prescription getPrescription(Long id, Long appointmentId) {
         if (id == 0) {
             Prescription prescription = new Prescription();
-            prescription.setPatient(appointmentService.getAppointment(appointmentId).getPatient());
+
+            if (appointmentId != 0) {
+                prescription.setPatient(appointmentService.getAppointment(appointmentId).getPatient());
+            }
+
             return prescription;
         } else {
             return prescriptionService.getPrescriptionById(id);

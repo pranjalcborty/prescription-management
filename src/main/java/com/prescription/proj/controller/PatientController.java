@@ -43,7 +43,7 @@ public class PatientController {
 
     @RequestMapping(value = CREATE_PATIENT_PATH, method = RequestMethod.GET)
     public String createView(@RequestParam(defaultValue = "0") Long patientId, ModelMap model, HttpSession session) {
-        if (notHasRole(User.Role.RECEPTIONIST)) {
+        if (notHasRole(User.Role.RECEPTIONIST, User.Role.ADMIN)) {
             return FAIL_VIEW;
         }
 
@@ -54,7 +54,7 @@ public class PatientController {
     @RequestMapping(value = CREATE_PATIENT_PATH, method = RequestMethod.POST)
     public String add(@Valid @ModelAttribute(PATIENT) Patient patient, BindingResult result,
                       ModelMap model, HttpSession session) {
-        if (notHasRole(User.Role.RECEPTIONIST)) {
+        if (notHasRole(User.Role.RECEPTIONIST, User.Role.ADMIN)) {
             return FAIL_VIEW;
         }
 

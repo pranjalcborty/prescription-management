@@ -33,9 +33,11 @@ public class PrescriptionService {
     }
 
     public void save(Prescription prescription, long appointmentId) {
-        Appointment appointment = appointmentDao.getAppointment(appointmentId);
-        appointment.setPrescribed(true);
-        appointmentDao.merge(appointment);
+        if (appointmentId != 0) {
+            Appointment appointment = appointmentDao.getAppointment(appointmentId);
+            appointment.setPrescribed(true);
+            appointmentDao.merge(appointment);
+        }
 
         if (prescription.getId() != 0) {
             prescriptionDao.update(prescription);

@@ -48,7 +48,7 @@ public class AppointmentController {
 
     @RequestMapping(value = CREATE_APPOINTMENT_PATH, method = RequestMethod.GET)
     public String view(@RequestParam(defaultValue = "0") Long appointmentId, HttpSession session, ModelMap model) {
-        if (notHasRole(User.Role.REFERRER)) {
+        if (notHasRole(User.Role.REFERRER, User.Role.ADMIN)) {
             return FAIL_VIEW;
         }
 
@@ -60,8 +60,8 @@ public class AppointmentController {
 
     @RequestMapping(value = CREATE_APPOINTMENT_PATH, method = RequestMethod.POST)
     public String save(@Valid @ModelAttribute(APPOINTMENT) Appointment appointment, BindingResult result,
-                       ModelMap model, HttpSession session) {
-        if (notHasRole(User.Role.REFERRER)) {
+                       ModelMap model) {
+        if (notHasRole(User.Role.REFERRER, User.Role.ADMIN)) {
             return FAIL_VIEW;
         }
 

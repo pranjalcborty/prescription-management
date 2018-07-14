@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import static com.prescription.proj.helper.Constants.APPOINTMENTS;
-import static com.prescription.proj.helper.Constants.getRole;
+import static com.prescription.proj.helper.Constants.notHasRole;
 
 @Controller
 public class HomeController {
@@ -24,7 +24,7 @@ public class HomeController {
 
     @RequestMapping(value = Constants.HOME_PATH, method = RequestMethod.GET)
     public String home(ModelMap model) {
-        if (getRole().equals(User.Role.DOCTOR)) {
+        if (!notHasRole(User.Role.ADMIN) || !notHasRole(User.Role.DOCTOR)) {
             model.addAttribute(APPOINTMENTS, appointmentService.getPendingAppointments());
         }
         return "success";
