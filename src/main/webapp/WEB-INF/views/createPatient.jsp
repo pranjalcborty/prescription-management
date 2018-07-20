@@ -40,9 +40,12 @@
                         </div>
                     </div>
                     <div class="col-xs-6">
+                        <label><fmt:message key="label.gender"/></label>
                         <div class="form-group">
-                            <label><fmt:message key="label.gender"/></label>
-                            <form:input path="sex" type="text" class="form-control"/>
+                            <form:select path="sex" cssClass="selectpicker" data-live-search="true">
+                                <form:option value="" label="---Please Select---"/>
+                                <form:options items="${gender}"/>
+                            </form:select>
                             <form:errors path="sex" class="error"/>
                         </div>
                     </div>
@@ -59,8 +62,10 @@
                     <div class="col-xs-6">
                         <div class="form-group">
                             <label><fmt:message key="label.regNum"/></label>
-                            <form:input disabled="true" path="regNum" type="text" class="form-control"/>
-                            <form:errors path="regNum" class="error"/>
+                            <div class="input-group">
+                                <form:input path="regNum" type="text" class="form-control" readonly="true"/>
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                            </div>
                         </div>
                         <div class="form-group">
                             <label><fmt:message key="label.regDate"/></label>
@@ -75,16 +80,22 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-6">
+                            <label><fmt:message key="label.bg"/></label>
                             <div class="form-group">
-                                <label><fmt:message key="label.bg"/></label>
-                                <form:input path="bloodGroup" type="text" class="form-control"/>
+                                <form:select path="bloodGroup" cssClass="selectpicker" data-live-search="true">
+                                    <form:option value="" label="---Please Select---"/>
+                                    <form:options items="${blood}"/>
+                                </form:select>
                                 <form:errors path="bloodGroup" class="error"/>
                             </div>
                         </div>
                         <div class="col-xs-6">
+                            <label><fmt:message key="label.religion"/></label>
                             <div class="form-group">
-                                <label><fmt:message key="label.religion"/></label>
-                                <form:input path="religion" type="text" class="form-control"/>
+                                <form:select path="religion" cssClass="selectpicker" data-live-search="true">
+                                    <form:option value="" label="---Please Select---"/>
+                                    <form:options items="${religion}"/>
+                                </form:select>
                                 <form:errors path="religion" class="error"/>
                             </div>
                         </div>

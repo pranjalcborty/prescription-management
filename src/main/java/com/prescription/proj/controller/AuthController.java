@@ -19,6 +19,8 @@ import org.springframework.web.bind.support.SessionStatus;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
+import java.util.Arrays;
+
 import static com.prescription.proj.helper.Constants.*;
 import static java.util.Objects.isNull;
 
@@ -71,14 +73,15 @@ public class AuthController {
 
         User currentUser = userService.getUser(user.getUserName());
         session.setAttribute(USER, currentUser);
-        session.setAttribute(ROLE, currentUser.getRole());
+        currentUser.getRole().forEach(r -> session.setAttribute(r.getName(), true));
         return redirectTo(HOME_PATH);
     }
 
     @RequestMapping(value = REG_PATH, method = RequestMethod.GET)
     public String registerView(ModelMap model, HttpSession session) {
         if (isNull(session.getAttribute(USER))) {
-            model.put(USER, new User());
+            model.addAttribute(USER, new User())
+                    .addAttribute("allRoles", User.Role.values());
             return REG_VIEW;
         }
 
@@ -88,20 +91,20 @@ public class AuthController {
     @RequestMapping(value = REG_PATH, method = RequestMethod.POST)
     public String register(@Valid @ModelAttribute(USER) User user, BindingResult result, ModelMap model) {
         if (result.hasErrors()) {
-            model.put(USER, user);
+            model.addAttribute(USER, user)
+                    .addAttribute("allRoles", User.Role.values());
+
             return REG_VIEW;
         }
 
-        user.setRole(User.Role.ADMIN);
         userService.save(user);
         return redirectTo(LOGIN_PATH);
     }
 
     @RequestMapping(value = LOGOUT_PATH, method = RequestMethod.GET)
-    public String logout(SessionStatus status, HttpSession session) {
-        status.setComplete();
+    public String logout(HttpSession session) {
         session.removeAttribute(USER);
-        session.removeAttribute(ROLE);
+        Arrays.stream(User.Role.values()).forEach(r -> session.removeAttribute(r.getName()));
 
         return redirectTo(LOGIN_PATH);
     }

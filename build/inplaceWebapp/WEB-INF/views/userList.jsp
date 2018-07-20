@@ -35,7 +35,7 @@
         </table>
     </div>
     <a href="<c:url value='/addUser?role=${role}'/>" class="btn btn-success">
-        <i class="fa fa-plus"></i> Add ${role.name}
+        <i class="fa fa-plus"></i> Add User
     </a>
 </div>
 

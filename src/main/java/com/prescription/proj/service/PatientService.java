@@ -25,9 +25,9 @@ public class PatientService {
         return patientDao.getPatients();
     }
 
-    public void save(Patient patient, HttpSession session) {
+    public void save(Patient patient) {
         if (patient.getId() == 0) {
-            patient.setCreatedBy(getUser(session));
+            patient.setCreatedBy(getUser());
             patientDao.save(patient);
         } else {
             patientDao.update(patient);
@@ -38,7 +38,7 @@ public class PatientService {
         return patientDao.getPatient(id);
     }
 
-    public Integer countTodaysPatients() {
-        return patientDao.getPatientCount(new Date());
+    public String countTodayPatients() {
+        return String.format("%04d", patientDao.countOfToday() + 1);
     }
 }

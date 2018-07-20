@@ -1,6 +1,7 @@
 package com.prescription.proj.domain;
 
 import javax.persistence.*;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
@@ -23,8 +24,13 @@ public class Appointment implements Serializable {
     private Patient patient;
 
     private Date appointmentDate;
+
+    @Max(2000)
     private String primaryInvestigation;
+
+    @Max(2000)
     private String remarks;
+
     private boolean prescribed = false;
 
     @ManyToOne(fetch = FetchType.EAGER)

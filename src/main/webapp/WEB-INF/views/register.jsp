@@ -54,6 +54,14 @@
                     <form:errors path="phone" class="error"/>
                 </div>
 
+                <label>Select roles</label>
+                <div class="form-group">
+                    <form:select path="role" cssClass="selectpicker" data-live-search="true" multiple="true">
+                        <form:options items="${allRoles}"/>
+                    </form:select>
+                </div>
+                <form:errors path="role" class="error"/>
+
                 <button type="submit" class="btn btn-block btn-primary"><fmt:message key="label.register"/></button>
             </form:form>
         </div>

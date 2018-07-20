@@ -94,26 +94,34 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
       if (_jspx_meth_c_url_4(_jspx_page_context))
         return;
       out.write("\">\r\n");
-      out.write("    <link href=\"");
+      out.write("    <link rel=\"stylesheet\" href=\"");
       if (_jspx_meth_c_url_5(_jspx_page_context))
+        return;
+      out.write("\">\r\n");
+      out.write("    <link href=\"");
+      if (_jspx_meth_c_url_6(_jspx_page_context))
         return;
       out.write("\" rel=\"stylesheet\">\r\n");
       out.write("\r\n");
       out.write("    <style>body {background-image: url(\"");
-      if (_jspx_meth_c_url_6(_jspx_page_context))
+      if (_jspx_meth_c_url_7(_jspx_page_context))
         return;
       out.write("\");}</style>\r\n");
       out.write("\r\n");
-      out.write("    <script src=\"");
-      if (_jspx_meth_c_url_7(_jspx_page_context))
-        return;
-      out.write("\"></script>\r\n");
       out.write("    <script src=\"");
       if (_jspx_meth_c_url_8(_jspx_page_context))
         return;
       out.write("\"></script>\r\n");
       out.write("    <script src=\"");
       if (_jspx_meth_c_url_9(_jspx_page_context))
+        return;
+      out.write("\"></script>\r\n");
+      out.write("    <script src=\"");
+      if (_jspx_meth_c_url_10(_jspx_page_context))
+        return;
+      out.write("\"></script>\r\n");
+      out.write("    <script src=\"");
+      if (_jspx_meth_c_url_11(_jspx_page_context))
         return;
       out.write("\"></script>\r\n");
       out.write("</head>\r\n");
@@ -143,14 +151,18 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
       if (_jspx_meth_c_if_2(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("\r\n");
       out.write("                ");
       if (_jspx_meth_c_if_3(_jspx_page_context))
         return;
       out.write("\r\n");
       out.write("\r\n");
+      out.write("                ");
+      if (_jspx_meth_c_if_4(_jspx_page_context))
+        return;
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("                <li><a href=\"");
-      if (_jspx_meth_c_url_19(_jspx_page_context))
+      if (_jspx_meth_c_url_22(_jspx_page_context))
         return;
       out.write("\">Logout</a></li>\r\n");
       out.write("            </ul>\r\n");
@@ -257,7 +269,7 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_3 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_3.setPageContext(_jspx_page_context);
     _jspx_th_c_url_3.setParent(null);
-    _jspx_th_c_url_3.setValue("/assets/css/fontawesome-all.min.css");
+    _jspx_th_c_url_3.setValue("/assets/css/bootstrap-select.min.css");
     int _jspx_eval_c_url_3 = _jspx_th_c_url_3.doStartTag();
     if (_jspx_th_c_url_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_3);
@@ -275,7 +287,7 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_4 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_4.setPageContext(_jspx_page_context);
     _jspx_th_c_url_4.setParent(null);
-    _jspx_th_c_url_4.setValue("/assets/css/style.css");
+    _jspx_th_c_url_4.setValue("/assets/css/fontawesome-all.min.css");
     int _jspx_eval_c_url_4 = _jspx_th_c_url_4.doStartTag();
     if (_jspx_th_c_url_4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_4);
@@ -293,7 +305,7 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_5 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_5.setPageContext(_jspx_page_context);
     _jspx_th_c_url_5.setParent(null);
-    _jspx_th_c_url_5.setValue("/assets/webfonts/lora.css");
+    _jspx_th_c_url_5.setValue("/assets/css/style.css");
     int _jspx_eval_c_url_5 = _jspx_th_c_url_5.doStartTag();
     if (_jspx_th_c_url_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_5);
@@ -311,7 +323,7 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_6 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_6.setPageContext(_jspx_page_context);
     _jspx_th_c_url_6.setParent(null);
-    _jspx_th_c_url_6.setValue("/assets/images/appointment.jpg");
+    _jspx_th_c_url_6.setValue("/assets/webfonts/lora.css");
     int _jspx_eval_c_url_6 = _jspx_th_c_url_6.doStartTag();
     if (_jspx_th_c_url_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_6);
@@ -329,7 +341,7 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_7 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_7.setPageContext(_jspx_page_context);
     _jspx_th_c_url_7.setParent(null);
-    _jspx_th_c_url_7.setValue("/assets/js/jquery-3.3.1.min.js");
+    _jspx_th_c_url_7.setValue("/assets/images/appointment.jpg");
     int _jspx_eval_c_url_7 = _jspx_th_c_url_7.doStartTag();
     if (_jspx_th_c_url_7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_7);
@@ -347,7 +359,7 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_8 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_8.setPageContext(_jspx_page_context);
     _jspx_th_c_url_8.setParent(null);
-    _jspx_th_c_url_8.setValue("/assets/js/bootstrap.min.js");
+    _jspx_th_c_url_8.setValue("/assets/js/jquery-3.3.1.min.js");
     int _jspx_eval_c_url_8 = _jspx_th_c_url_8.doStartTag();
     if (_jspx_th_c_url_8.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_8);
@@ -365,13 +377,49 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_9 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_9.setPageContext(_jspx_page_context);
     _jspx_th_c_url_9.setParent(null);
-    _jspx_th_c_url_9.setValue("/assets/js/script.js");
+    _jspx_th_c_url_9.setValue("/assets/js/bootstrap.min.js");
     int _jspx_eval_c_url_9 = _jspx_th_c_url_9.doStartTag();
     if (_jspx_th_c_url_9.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_9);
       return true;
     }
     _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_9);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_10(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_10 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_10.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_10.setParent(null);
+    _jspx_th_c_url_10.setValue("/assets/js/bootstrap-select.min.js");
+    int _jspx_eval_c_url_10 = _jspx_th_c_url_10.doStartTag();
+    if (_jspx_th_c_url_10.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_10);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_10);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_11(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_11 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_11.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_11.setParent(null);
+    _jspx_th_c_url_11.setValue("/assets/js/script.js");
+    int _jspx_eval_c_url_11 = _jspx_th_c_url_11.doStartTag();
+    if (_jspx_th_c_url_11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_11);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_11);
     return false;
   }
 
@@ -401,13 +449,13 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_if_0.setPageContext(_jspx_page_context);
     _jspx_th_c_if_0.setParent(null);
-    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${currentRole == 'DOCTOR' || currentRole == 'ADMIN'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty Doctor or not empty Admin}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
     int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
     if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
         out.write("                    <li><a href=\"");
-        if (_jspx_meth_c_url_10((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_0, _jspx_page_context))
+        if (_jspx_meth_c_url_12((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_0, _jspx_page_context))
           return true;
         out.write("\">Prescription</a></li>\r\n");
         out.write("                ");
@@ -424,21 +472,21 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_10(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_0, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_url_12(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_0, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
-    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_10 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
-    _jspx_th_c_url_10.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_10.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_0);
-    _jspx_th_c_url_10.setValue("/prescription");
-    int _jspx_eval_c_url_10 = _jspx_th_c_url_10.doStartTag();
-    if (_jspx_th_c_url_10.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_10);
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_12 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_12.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_12.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_0);
+    _jspx_th_c_url_12.setValue("/prescription");
+    int _jspx_eval_c_url_12 = _jspx_th_c_url_12.doStartTag();
+    if (_jspx_th_c_url_12.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_12);
       return true;
     }
-    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_10);
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_12);
     return false;
   }
 
@@ -450,13 +498,13 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_1 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_if_1.setPageContext(_jspx_page_context);
     _jspx_th_c_if_1.setParent(null);
-    _jspx_th_c_if_1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${currentRole == 'RECEPTIONIST' || currentRole == 'ADMIN'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    _jspx_th_c_if_1.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty Receptionist or not empty Admin}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
     int _jspx_eval_c_if_1 = _jspx_th_c_if_1.doStartTag();
     if (_jspx_eval_c_if_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
         out.write("                    <li><a href=\"");
-        if (_jspx_meth_c_url_11((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_1, _jspx_page_context))
+        if (_jspx_meth_c_url_13((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_1, _jspx_page_context))
           return true;
         out.write("\">Patient</a></li>\r\n");
         out.write("                ");
@@ -473,21 +521,21 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_11(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_1, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_url_13(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_1, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
-    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_11 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
-    _jspx_th_c_url_11.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_11.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_1);
-    _jspx_th_c_url_11.setValue("/patient");
-    int _jspx_eval_c_url_11 = _jspx_th_c_url_11.doStartTag();
-    if (_jspx_th_c_url_11.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_11);
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_13 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_13.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_13.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_1);
+    _jspx_th_c_url_13.setValue("/patient");
+    int _jspx_eval_c_url_13 = _jspx_th_c_url_13.doStartTag();
+    if (_jspx_th_c_url_13.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_13);
       return true;
     }
-    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_11);
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_13);
     return false;
   }
 
@@ -499,13 +547,13 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_2 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_if_2.setPageContext(_jspx_page_context);
     _jspx_th_c_if_2.setParent(null);
-    _jspx_th_c_if_2.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${currentRole == 'REFERRER' || currentRole == 'ADMIN'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    _jspx_th_c_if_2.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty Referrer or not empty Admin}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
     int _jspx_eval_c_if_2 = _jspx_th_c_if_2.doStartTag();
     if (_jspx_eval_c_if_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
         out.write("                    <li><a href=\"");
-        if (_jspx_meth_c_url_12((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_2, _jspx_page_context))
+        if (_jspx_meth_c_url_14((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_2, _jspx_page_context))
           return true;
         out.write("\">Appointment</a></li>\r\n");
         out.write("                ");
@@ -522,21 +570,21 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_12(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_2, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_url_14(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_2, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
-    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_12 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
-    _jspx_th_c_url_12.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_12.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_2);
-    _jspx_th_c_url_12.setValue("/appointment");
-    int _jspx_eval_c_url_12 = _jspx_th_c_url_12.doStartTag();
-    if (_jspx_th_c_url_12.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_12);
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_14 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_14.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_14.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_2);
+    _jspx_th_c_url_14.setValue("/appointment");
+    int _jspx_eval_c_url_14 = _jspx_th_c_url_14.doStartTag();
+    if (_jspx_th_c_url_14.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_14);
       return true;
     }
-    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_12);
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_14);
     return false;
   }
 
@@ -548,42 +596,15 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_3 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_if_3.setPageContext(_jspx_page_context);
     _jspx_th_c_if_3.setParent(null);
-    _jspx_th_c_if_3.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${currentRole == 'ADMIN'}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    _jspx_th_c_if_3.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty Doctor or not empty Admin}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
     int _jspx_eval_c_if_3 = _jspx_th_c_if_3.doStartTag();
     if (_jspx_eval_c_if_3 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("                    <li class=\"dropdown\">\r\n");
-        out.write("                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n");
-        out.write("                            Users <span class=\"caret\"></span>\r\n");
-        out.write("                        </a>\r\n");
-        out.write("                        <ul class=\"dropdown-menu\">\r\n");
-        out.write("                            <li><a class=\"dropdown-item\" href=\"");
-        if (_jspx_meth_c_url_13((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_3, _jspx_page_context))
-          return true;
-        out.write("\">Receptionist</a></li>\r\n");
-        out.write("                            <li><a class=\"dropdown-item\" href=\"");
-        if (_jspx_meth_c_url_14((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_3, _jspx_page_context))
-          return true;
-        out.write("\">Referrer</a></li>\r\n");
-        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        out.write("                    <li><a href=\"");
         if (_jspx_meth_c_url_15((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_3, _jspx_page_context))
           return true;
-        out.write("\">Doctor</a></li>\r\n");
-        out.write("                            <li><a class=\"dropdown-item\" href=\"");
-        if (_jspx_meth_c_url_16((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_3, _jspx_page_context))
-          return true;
-        out.write("\">Pathologist</a></li>\r\n");
-        out.write("                            <li><a class=\"dropdown-item\" href=\"");
-        if (_jspx_meth_c_url_17((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_3, _jspx_page_context))
-          return true;
-        out.write("\">Pharmacist</a></li>\r\n");
-        out.write("                            <li><a class=\"dropdown-item\" href=\"");
-        if (_jspx_meth_c_url_18((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_3, _jspx_page_context))
-          return true;
-        out.write("\">Admin</a></li>\r\n");
-        out.write("                        </ul>\r\n");
-        out.write("                    </li>\r\n");
+        out.write("\">Prescribe test</a></li>\r\n");
         out.write("                ");
         int evalDoAfterBody = _jspx_th_c_if_3.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -598,42 +619,6 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_13(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_3, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:url
-    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_13 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
-    _jspx_th_c_url_13.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_13.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_3);
-    _jspx_th_c_url_13.setValue("/users?role=RECEPTIONIST");
-    int _jspx_eval_c_url_13 = _jspx_th_c_url_13.doStartTag();
-    if (_jspx_th_c_url_13.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_13);
-      return true;
-    }
-    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_13);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_url_14(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_3, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:url
-    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_14 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
-    _jspx_th_c_url_14.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_14.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_3);
-    _jspx_th_c_url_14.setValue("/users?role=REFERRER");
-    int _jspx_eval_c_url_14 = _jspx_th_c_url_14.doStartTag();
-    if (_jspx_th_c_url_14.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_14);
-      return true;
-    }
-    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_14);
-    return false;
-  }
-
   private boolean _jspx_meth_c_url_15(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_3, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
@@ -642,7 +627,7 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_15 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_15.setPageContext(_jspx_page_context);
     _jspx_th_c_url_15.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_3);
-    _jspx_th_c_url_15.setValue("/users?role=DOCTOR");
+    _jspx_th_c_url_15.setValue("/prescribeTest");
     int _jspx_eval_c_url_15 = _jspx_th_c_url_15.doStartTag();
     if (_jspx_th_c_url_15.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_15);
@@ -652,15 +637,73 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_16(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_3, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_if_4(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_4 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_4.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_4.setParent(null);
+    _jspx_th_c_if_4.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty Admin}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_4 = _jspx_th_c_if_4.doStartTag();
+    if (_jspx_eval_c_if_4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("                    <li class=\"dropdown\">\r\n");
+        out.write("                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n");
+        out.write("                            Users <span class=\"caret\"></span>\r\n");
+        out.write("                        </a>\r\n");
+        out.write("                        <ul class=\"dropdown-menu\">\r\n");
+        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        if (_jspx_meth_c_url_16((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_4, _jspx_page_context))
+          return true;
+        out.write("\">Receptionist</a></li>\r\n");
+        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        if (_jspx_meth_c_url_17((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_4, _jspx_page_context))
+          return true;
+        out.write("\">Referrer</a></li>\r\n");
+        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        if (_jspx_meth_c_url_18((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_4, _jspx_page_context))
+          return true;
+        out.write("\">Doctor</a></li>\r\n");
+        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        if (_jspx_meth_c_url_19((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_4, _jspx_page_context))
+          return true;
+        out.write("\">Pathologist</a></li>\r\n");
+        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        if (_jspx_meth_c_url_20((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_4, _jspx_page_context))
+          return true;
+        out.write("\">Pharmacist</a></li>\r\n");
+        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        if (_jspx_meth_c_url_21((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_4, _jspx_page_context))
+          return true;
+        out.write("\">Admin</a></li>\r\n");
+        out.write("                        </ul>\r\n");
+        out.write("                    </li>\r\n");
+        out.write("                ");
+        int evalDoAfterBody = _jspx_th_c_if_4.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_4);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_4);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_16(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_4, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_16 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_16.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_16.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_3);
-    _jspx_th_c_url_16.setValue("/users?role=PATHOLOGIST");
+    _jspx_th_c_url_16.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_4);
+    _jspx_th_c_url_16.setValue("/users?role=RECEPTIONIST");
     int _jspx_eval_c_url_16 = _jspx_th_c_url_16.doStartTag();
     if (_jspx_th_c_url_16.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_16);
@@ -670,15 +713,15 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_17(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_3, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_url_17(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_4, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_17 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_17.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_17.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_3);
-    _jspx_th_c_url_17.setValue("/users?role=PHARMACIST");
+    _jspx_th_c_url_17.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_4);
+    _jspx_th_c_url_17.setValue("/users?role=REFERRER");
     int _jspx_eval_c_url_17 = _jspx_th_c_url_17.doStartTag();
     if (_jspx_th_c_url_17.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_17);
@@ -688,15 +731,15 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_18(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_3, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_url_18(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_4, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_18 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_18.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_18.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_3);
-    _jspx_th_c_url_18.setValue("/users?role=ADMIN");
+    _jspx_th_c_url_18.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_4);
+    _jspx_th_c_url_18.setValue("/users?role=DOCTOR");
     int _jspx_eval_c_url_18 = _jspx_th_c_url_18.doStartTag();
     if (_jspx_th_c_url_18.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_18);
@@ -706,21 +749,75 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_19(PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_url_19(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_4, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_19 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_19.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_19.setParent(null);
-    _jspx_th_c_url_19.setValue("/logout");
+    _jspx_th_c_url_19.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_4);
+    _jspx_th_c_url_19.setValue("/users?role=PATHOLOGIST");
     int _jspx_eval_c_url_19 = _jspx_th_c_url_19.doStartTag();
     if (_jspx_th_c_url_19.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_19);
       return true;
     }
     _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_19);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_20(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_4, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_20 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_20.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_20.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_4);
+    _jspx_th_c_url_20.setValue("/users?role=PHARMACIST");
+    int _jspx_eval_c_url_20 = _jspx_th_c_url_20.doStartTag();
+    if (_jspx_th_c_url_20.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_20);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_20);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_21(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_4, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_21 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_21.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_21.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_4);
+    _jspx_th_c_url_21.setValue("/users?role=ADMIN");
+    int _jspx_eval_c_url_21 = _jspx_th_c_url_21.doStartTag();
+    if (_jspx_th_c_url_21.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_21);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_21);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_22(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_22 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_22.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_22.setParent(null);
+    _jspx_th_c_url_22.setValue("/logout");
+    int _jspx_eval_c_url_22 = _jspx_th_c_url_22.doStartTag();
+    if (_jspx_th_c_url_22.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_22);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_22);
     return false;
   }
 

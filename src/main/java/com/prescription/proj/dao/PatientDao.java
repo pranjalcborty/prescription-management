@@ -33,14 +33,16 @@ public class PatientDao {
         em.persist(patient);
     }
 
-    public Integer getPatientCount(Date date) {
-        String jpql = "SELECT COUNT(p) FROM Patient p WHERE p.regDate = :regDate";
-
-        return em.createQuery(jpql, Integer.class).setParameter("regDate", date, TemporalType.DATE).getSingleResult();
-    }
-
     @Transactional
     public void update(Patient patient) {
         em.merge(patient);
+    }
+
+    public long countOfToday() {
+        String jpql = "SELECT COUNT(p.id) FROM Patient p WHERE p.createdOn = :date";
+
+        return em.createQuery(jpql, Long.class)
+                .setParameter("date", new Date(), TemporalType.DATE)
+                .getSingleResult();
     }
 }

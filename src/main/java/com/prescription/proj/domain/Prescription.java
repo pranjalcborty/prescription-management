@@ -34,6 +34,8 @@ public class Prescription implements Serializable {
 
     private Date createdOn;
 
+    private boolean active = true;
+
     public long getId() {
         return id;
     }
@@ -112,5 +114,13 @@ public class Prescription implements Serializable {
 
     public void setCreatedOn(Date createdOn) {
         this.createdOn = createdOn;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 }

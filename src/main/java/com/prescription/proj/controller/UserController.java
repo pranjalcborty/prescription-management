@@ -47,6 +47,7 @@ public class UserController {
         }
 
         model.addAttribute(USER, new User());
+        model.addAttribute("allRoles", User.Role.values());
         return ADD_USER_VIEW;
     }
 
@@ -63,7 +64,6 @@ public class UserController {
             return ADD_USER_VIEW;
         }
 
-        user.setRole(role);
         userService.save(user);
         return redirectTo(urlAddParams(USER_LIST_PATH, "role", role.name()));
     }

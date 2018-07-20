@@ -7,8 +7,10 @@ import com.prescription.proj.domain.User.Role;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.NoResultException;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService {
@@ -25,7 +27,11 @@ public class UserService {
     }
 
     public User getUser(String userName) {
-        return userDao.getUser(userName);
+        try {
+            return userDao.getUser(userName);
+        } catch (NoResultException e) {
+            return null;
+        }
     }
 
     public User getUser(long id) {
@@ -51,6 +57,6 @@ public class UserService {
     }
 
     public List<User> getAllUsers(Role role) {
-        return userDao.getUsers(role);
+        return getAllUsers().stream().filter(u -> u.getRole().contains(role)).collect(Collectors.toList());
     }
 }

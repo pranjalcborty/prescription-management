@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
+
+import static com.prescription.proj.helper.Constants.isEmpty;
+
 @Component
 public class RegistrationValidator implements Validator {
 
@@ -24,8 +27,14 @@ public class RegistrationValidator implements Validator {
 
     @Override
     public void validate(Object target, Errors errors) {
-        if (userService.isUserExistsWithUniqueIdentifiers((User) target)) {
+        User user = (User) target;
+
+        if (userService.isUserExistsWithUniqueIdentifiers(user)) {
             errors.reject("error.user.exists");
+        }
+
+        if (isEmpty(user.getRole())) {
+            errors.rejectValue("role", "error.user.role");
         }
     }
 }

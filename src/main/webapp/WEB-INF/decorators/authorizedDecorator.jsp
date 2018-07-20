@@ -15,6 +15,7 @@
     <link rel="icon" href="<c:url value='/assets/images/plus.ico'/>">
     <link rel="stylesheet" href="<c:url value='/assets/css/bootstrap.min.css'/>">
     <link rel="stylesheet" href="<c:url value='/assets/css/dataTables.bootstrap.min.css'/>">
+    <link rel="stylesheet" href="<c:url value='/assets/css/bootstrap-select.min.css'/>">
     <link rel="stylesheet" href="<c:url value='/assets/css/fontawesome-all.min.css'/>">
     <link rel="stylesheet" href="<c:url value='/assets/css/style.css'/>">
     <link href="<c:url value='/assets/webfonts/lora.css'/>" rel="stylesheet">
@@ -23,6 +24,7 @@
 
     <script src="<c:url value='/assets/js/jquery-3.3.1.min.js'/>"></script>
     <script src="<c:url value='/assets/js/bootstrap.min.js'/>"></script>
+    <script src="<c:url value='/assets/js/bootstrap-select.min.js'/>"></script>
     <script src="<c:url value='/assets/js/script.js'/>"></script>
 </head>
 <body>
@@ -36,17 +38,20 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <c:if test="${currentRole == 'DOCTOR' || currentRole == 'ADMIN'}">
+                <c:if test="${not empty Doctor or not empty Admin}">
                     <li><a href="<c:url value="/prescription"/>">Prescription</a></li>
                 </c:if>
-                <c:if test="${currentRole == 'RECEPTIONIST' || currentRole == 'ADMIN'}">
+                <c:if test="${not empty Receptionist or not empty Admin}">
                     <li><a href="<c:url value="/patient"/>">Patient</a></li>
                 </c:if>
-                <c:if test="${currentRole == 'REFERRER' || currentRole == 'ADMIN'}">
+                <c:if test="${not empty Referrer or not empty Admin}">
                     <li><a href="<c:url value="/appointment"/>">Appointment</a></li>
                 </c:if>
+                <c:if test="${not empty Doctor or not empty Admin}">
+                    <li><a href="<c:url value="/prescribeTest"/>">Prescribe test</a></li>
+                </c:if>
 
-                <c:if test="${currentRole == 'ADMIN'}">
+                <c:if test="${not empty Admin}">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             Users <span class="caret"></span>

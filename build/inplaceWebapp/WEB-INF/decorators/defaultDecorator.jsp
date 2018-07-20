@@ -14,6 +14,7 @@
     <title><decorator:title/></title>
     <link rel="icon" href="<c:url value='/assets/images/plus.ico'/>">
     <link rel="stylesheet" href="<c:url value='/assets/css/bootstrap.min.css'/>">
+    <link rel="stylesheet" href="<c:url value='/assets/css/bootstrap-select.min.css'/>">
     <link rel="stylesheet" href="<c:url value='/assets/css/fontawesome-all.min.css'/>">
     <link rel="stylesheet" href="<c:url value='/assets/css/style.css'/>">
     <link href="<c:url value='/assets/webfonts/lora.css'/>" rel="stylesheet">
@@ -35,6 +36,7 @@
 
 <script src="<c:url value='/assets/js/jquery-3.3.1.min.js'/>"></script>
 <script src="<c:url value='/assets/js/bootstrap.min.js'/>"></script>
+<script src="<c:url value='/assets/js/bootstrap-select.min.js'/>"></script>
 <script src="<c:url value='/assets/js/script.js'/>"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@ import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 
 @Entity
@@ -45,7 +46,11 @@ public class User implements Serializable {
 
     private Date createdOn;
 
-    private Role role;
+    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+    @Enumerated(EnumType.STRING)
+    private Collection<Role> role;
+
+    private boolean active = true;
 
     public String getName() {
         return name;
@@ -103,12 +108,20 @@ public class User implements Serializable {
         this.createdOn = createdOn;
     }
 
-    public Role getRole() {
+    public Collection<Role> getRole() {
         return role;
     }
 
-    public void setRole(Role role) {
+    public void setRole(Collection<Role> role) {
         this.role = role;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     @Override

@@ -48,26 +48,41 @@ public class PatientController {
         }
 
         model.addAttribute(PATIENT, getPatient(patientId));
+        setCommonValues(model);
         return CREATE_PATIENT_VIEW;
     }
 
     @RequestMapping(value = CREATE_PATIENT_PATH, method = RequestMethod.POST)
     public String add(@Valid @ModelAttribute(PATIENT) Patient patient, BindingResult result,
-                      ModelMap model, HttpSession session) {
+                      ModelMap model) {
         if (notHasRole(User.Role.RECEPTIONIST, User.Role.ADMIN)) {
             return FAIL_VIEW;
         }
 
         if (result.hasErrors()) {
             model.addAttribute(PATIENT, patient);
+            setCommonValues(model);
             return CREATE_PATIENT_VIEW;
         }
 
-        patientService.save(patient, session);
+        patientService.save(patient);
         return redirectTo(PATIENT_PATH);
     }
 
     private Patient getPatient(Long id) {
-        return id == 0 ? new Patient() : patientService.getPatient(id);
+        Patient patient = new Patient();
+        patient.setRegNum(getRegNum());
+        return id == 0 ? patient : patientService.getPatient(id);
+    }
+
+    private void setCommonValues(ModelMap model) {
+        model.addAttribute(GENDER, genderList)
+                .addAttribute(BLOOD, bloodList)
+                .addAttribute(RELIGION, religionList);
+    }
+
+    private long getRegNum() {
+        String date = new SimpleDateFormat("yyyyMMdd").format(new Date());
+        return Long.valueOf(date + patientService.countTodayPatients());
     }
 }

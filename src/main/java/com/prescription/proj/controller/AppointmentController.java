@@ -47,7 +47,7 @@ public class AppointmentController {
     }
 
     @RequestMapping(value = CREATE_APPOINTMENT_PATH, method = RequestMethod.GET)
-    public String view(@RequestParam(defaultValue = "0") Long appointmentId, HttpSession session, ModelMap model) {
+    public String view(@RequestParam(defaultValue = "0") Long appointmentId, ModelMap model) {
         if (notHasRole(User.Role.REFERRER, User.Role.ADMIN)) {
             return FAIL_VIEW;
         }
@@ -76,6 +76,6 @@ public class AppointmentController {
     }
 
     private Appointment getAppointment(Long appointmentId) {
-        return appointmentId == 0 ? new Appointment() : appointmentService.getAppointment(appointmentId);
+        return appointmentId != 0 ? appointmentService.getAppointment(appointmentId) : new Appointment();
     }
 }

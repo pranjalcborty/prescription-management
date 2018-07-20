@@ -1,6 +1,7 @@
 package com.prescription.proj.domain;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
@@ -19,7 +20,7 @@ public class Patient implements Serializable {
     @Length(min = 3, max = 30)
     private String name;
 
-    @Length(min = 1, max = 10)
+    @NotEmpty
     private String sex;
 
     @Length(max = 50)
@@ -31,8 +32,12 @@ public class Patient implements Serializable {
     @Max(Long.MAX_VALUE)
     private Long regFee;
 
+    @NotEmpty
     private String bloodGroup;
+
+    @NotEmpty
     private String religion;
+
     private Date dateOfBirth;
 
     @Temporal(TemporalType.DATE)
@@ -47,6 +52,8 @@ public class Patient implements Serializable {
     private User createdBy;
 
     private Date createdOn;
+
+    private boolean active = true;
 
     public long getId() {
         return id;
@@ -158,6 +165,14 @@ public class Patient implements Serializable {
 
     public void setCreatedOn(Date createdOn) {
         this.createdOn = createdOn;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     @Override

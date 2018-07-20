@@ -12,7 +12,9 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List<String> _jspx_dependants;
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_errors_path_class_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_select_path_multiple_data$1live$1search_cssClass;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_errors_path_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_options_items_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_fmt_message_key_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_form_modelAttribute_method;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_form_input_type_path_class_nobody;
@@ -25,7 +27,9 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   public void _jspInit() {
     _jspx_tagPool_form_errors_path_class_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_form_select_path_multiple_data$1live$1search_cssClass = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_form_errors_path_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_form_options_items_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_fmt_message_key_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_form_form_modelAttribute_method = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_form_input_type_path_class_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
@@ -33,7 +37,9 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   public void _jspDestroy() {
     _jspx_tagPool_form_errors_path_class_nobody.release();
+    _jspx_tagPool_form_select_path_multiple_data$1live$1search_cssClass.release();
     _jspx_tagPool_form_errors_path_nobody.release();
+    _jspx_tagPool_form_options_items_nobody.release();
     _jspx_tagPool_fmt_message_key_nobody.release();
     _jspx_tagPool_form_form_modelAttribute_method.release();
     _jspx_tagPool_form_input_type_path_class_nobody.release();
@@ -288,6 +294,36 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
             }
             out.write("\r\n");
             out.write("                </div>\r\n");
+            out.write("\r\n");
+            out.write("                <label>Select roles</label>\r\n");
+            out.write("                <div class=\"form-group\">\r\n");
+            out.write("                    ");
+            if (_jspx_meth_form_select_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_form_form_0, _jspx_page_context, _jspx_push_body_count_form_form_0))
+              return;
+            out.write("\r\n");
+            out.write("                </div>\r\n");
+            out.write("                ");
+            //  form:errors
+            org.springframework.web.servlet.tags.form.ErrorsTag _jspx_th_form_errors_6 = (org.springframework.web.servlet.tags.form.ErrorsTag) _jspx_tagPool_form_errors_path_class_nobody.get(org.springframework.web.servlet.tags.form.ErrorsTag.class);
+            _jspx_th_form_errors_6.setPageContext(_jspx_page_context);
+            _jspx_th_form_errors_6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_0);
+            _jspx_th_form_errors_6.setPath("role");
+            _jspx_th_form_errors_6.setDynamicAttribute(null, "class", new String("error"));
+            int[] _jspx_push_body_count_form_errors_6 = new int[] { 0 };
+            try {
+              int _jspx_eval_form_errors_6 = _jspx_th_form_errors_6.doStartTag();
+              if (_jspx_th_form_errors_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+                return;
+              }
+            } catch (Throwable _jspx_exception) {
+              while (_jspx_push_body_count_form_errors_6[0]-- > 0)
+                out = _jspx_page_context.popBody();
+              _jspx_th_form_errors_6.doCatch(_jspx_exception);
+            } finally {
+              _jspx_th_form_errors_6.doFinally();
+              _jspx_tagPool_form_errors_path_class_nobody.reuse(_jspx_th_form_errors_6);
+            }
+            out.write("\r\n");
             out.write("\r\n");
             out.write("                <button type=\"submit\" class=\"btn btn-block btn-primary\">");
             if (_jspx_meth_fmt_message_8((javax.servlet.jsp.tagext.JspTag) _jspx_th_form_form_0, _jspx_page_context, _jspx_push_body_count_form_form_0))
@@ -609,6 +645,74 @@ public final class register_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspx_th_form_input_4.doFinally();
       _jspx_tagPool_form_input_type_path_class_nobody.reuse(_jspx_th_form_input_4);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_form_select_0(javax.servlet.jsp.tagext.JspTag _jspx_th_form_form_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_form_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  form:select
+    org.springframework.web.servlet.tags.form.SelectTag _jspx_th_form_select_0 = (org.springframework.web.servlet.tags.form.SelectTag) _jspx_tagPool_form_select_path_multiple_data$1live$1search_cssClass.get(org.springframework.web.servlet.tags.form.SelectTag.class);
+    _jspx_th_form_select_0.setPageContext(_jspx_page_context);
+    _jspx_th_form_select_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_form_0);
+    _jspx_th_form_select_0.setPath("role");
+    _jspx_th_form_select_0.setCssClass("selectpicker");
+    _jspx_th_form_select_0.setDynamicAttribute(null, "data-live-search", new String("true"));
+    _jspx_th_form_select_0.setMultiple(new String("true"));
+    int[] _jspx_push_body_count_form_select_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_form_select_0 = _jspx_th_form_select_0.doStartTag();
+      if (_jspx_eval_form_select_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\r\n");
+          out.write("                        ");
+          if (_jspx_meth_form_options_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_form_select_0, _jspx_page_context, _jspx_push_body_count_form_select_0))
+            return true;
+          out.write("\r\n");
+          out.write("                    ");
+          int evalDoAfterBody = _jspx_th_form_select_0.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_form_select_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_form_select_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_form_select_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_form_select_0.doFinally();
+      _jspx_tagPool_form_select_path_multiple_data$1live$1search_cssClass.reuse(_jspx_th_form_select_0);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_form_options_0(javax.servlet.jsp.tagext.JspTag _jspx_th_form_select_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_form_select_0)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  form:options
+    org.springframework.web.servlet.tags.form.OptionsTag _jspx_th_form_options_0 = (org.springframework.web.servlet.tags.form.OptionsTag) _jspx_tagPool_form_options_items_nobody.get(org.springframework.web.servlet.tags.form.OptionsTag.class);
+    _jspx_th_form_options_0.setPageContext(_jspx_page_context);
+    _jspx_th_form_options_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_form_select_0);
+    _jspx_th_form_options_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${allRoles}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    int[] _jspx_push_body_count_form_options_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_form_options_0 = _jspx_th_form_options_0.doStartTag();
+      if (_jspx_th_form_options_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_form_options_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_form_options_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_form_options_0.doFinally();
+      _jspx_tagPool_form_options_items_nobody.reuse(_jspx_th_form_options_0);
     }
     return false;
   }

@@ -187,14 +187,12 @@
 </div>
 
 <link rel="stylesheet" href="<c:url value='/assets/css/jquery-te-1.4.0.css'/>">
-<link rel="stylesheet" href="<c:url value='/assets/css/bootstrap-select.min.css'/>">
 <style>
     a:hover {
         cursor: pointer;
     }
 </style>
 <script src="<c:url value='/assets/js/jquery-te-1.4.0.min.js'/>"></script>
-<script src="<c:url value='/assets/js/bootstrap-select.min.js'/>"></script>
 <script src="<c:url value='/assets/js/avro-v1.1.4.min.js'/>" type="text/javascript" charset="utf-8"></script>
 <script src="<c:url value='/assets/js/prescription.js'/>"></script>
 </body>
