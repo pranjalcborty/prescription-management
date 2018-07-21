@@ -50,6 +50,9 @@
                 <c:if test="${not empty Doctor or not empty Admin}">
                     <li><a href="<c:url value="/prescribeTest"/>">Prescribe test</a></li>
                 </c:if>
+                <c:if test="${not empty Pharmacist or not empty Admin}">
+                    <li><a href="<c:url value="/medicine"/>">Medicines</a></li>
+                </c:if>
 
                 <c:if test="${not empty Admin}">
                     <li class="dropdown">

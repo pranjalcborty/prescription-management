@@ -32,4 +32,8 @@ public class PathologyService {
     public List<Test> getAllPendingTests() {
         return pathologyDao.getAllTests();
     }
+
+    public Test getTest(long testId) {
+        return pathologyDao.getTest(testId);
+    }
 }

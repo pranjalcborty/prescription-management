@@ -30,4 +30,8 @@ public class PathologyDao {
 
         return em.createQuery(jpql, Test.class).getResultList();
     }
+
+    public Test getTest(long testId) {
+        return em.find(Test.class, testId);
+    }
 }

@@ -52,11 +52,13 @@ public class Constants {
 
     public static final String PRESCRIPTION_PATH = "/prescription";
     public static final String APPOINTMENT_PATH = "/appointment";
+    public static final String MEDICINE_PATH = "/medicine";
     public static final String PATIENT_PATH = "/patient";
     public static final String USER_LIST_PATH = "/users";
 
     public static final String CREATE_PRESCRIPTION_PATH = "/createPrescription";
     public static final String CREATE_APPOINTMENT_PATH = "/createAppointment";
+    public static final String CREATE_PATHOLOGY_PATH = "/createPathReport";
 
     //Views
     public static final String LOGIN_VIEW = "login";
@@ -70,6 +72,8 @@ public class Constants {
     public static final String CREATE_PRESCRIPTION_VIEW = "createPrescription";
     public static final String CREATE_APPOINTMENT_VIEW = "createAppointment";
     public static final String CREATE_TEST_VIEW = "createTest";
+    public static final String MEDICINE_VIEW = "viewAddMedicine";
+    public static final String PATHOLOGY_VIEW = "createPathReport";
     public static final String HOME_VIEW = "home";
     public static final String FAIL_VIEW = "failPage";
 
@@ -83,8 +87,12 @@ public class Constants {
     public static final String DOCTORS = "doctors";
     public static final String PRESCRIPTION = "prescription";
     public static final String PRESCRIPTIONS = "prescriptions";
+    public static final String MEDICINES = "medicines";
+    public static final String MEDICINE = "medicine";
     public static final String TEST = "test";
     public static final String TESTS = "tests";
+    public static final String REPORT = "report";
+    public static final String REPORTS = "reports";
     public static final String GENDER = "gender";
     public static final String RELIGION = "religion";
     public static final String BLOOD = "blood";

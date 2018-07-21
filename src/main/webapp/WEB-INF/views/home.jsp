@@ -13,11 +13,16 @@
     <title><fmt:message key="label.welcome"/></title>
 </head>
 <body>
+<c:if test="${not empty appointments or not empty tests}">
+    <script src="<c:url value='/assets/js/jquery.dataTables.min.js'/>"></script>
+    <script src="<c:url value='/assets/js/dataTables.bootstrap.min.js'/>"></script>
+</c:if>
+
 <c:if test="${not empty appointments}">
     <div class="jumbotron">
         <h4>Appointments you have to take care of</h4><br>
         <div class="table-responsive">
-            <table id="dataTable1" class="table table-bordered">
+            <table id="dataTable" class="table table-bordered">
                 <thead>
                 <tr>
                     <th>Patient Id</th>
@@ -39,12 +44,22 @@
             </table>
         </div>
     </div>
+
+    <script>
+        $(function () {
+            $("#dataTable").DataTable();
+
+            $("#dataTable tbody tr").click(function () {
+                window.location.href = $(this).data("url");
+            });
+        })
+    </script>
 </c:if>
 <c:if test="${not empty tests}">
     <div class="jumbotron">
         <h4>Pending tests</h4><br>
         <div class="table-responsive">
-            <table id="dataTable2" class="table table-bordered">
+            <table id="dTable" class="table table-bordered">
                 <thead>
                 <tr>
                     <th>Patient Id</th>
@@ -66,18 +81,21 @@
             </table>
         </div>
     </div>
+
+    <style>
+        #dTable {
+            color: white;
+        }
+    </style>
+    <script>
+        $(function () {
+            $("#dTable").DataTable();
+
+            $("#dTable tbody tr").click(function () {
+                window.location.href = $(this).data("url");
+            });
+        })
+    </script>
 </c:if>
-
-<script src="<c:url value='/assets/js/jquery.dataTables.min.js'/>"></script>
-<script src="<c:url value='/assets/js/dataTables.bootstrap.min.js'/>"></script>
-<script>
-    $(function () {
-        $("#dataTable1, #dataTable2").DataTable();
-
-        $("#dataTable1 tbody tr, #dataTable2 tbody tr").click(function () {
-            window.location.href = $(this).data("url");
-        });
-    })
-</script>
 </body>
 </html>

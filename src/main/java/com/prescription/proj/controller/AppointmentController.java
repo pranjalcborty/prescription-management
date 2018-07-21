@@ -9,6 +9,7 @@ import com.prescription.proj.service.UserService;
 import com.prescription.proj.web.editor.PatientEditor;
 import com.prescription.proj.web.editor.UserEditor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -17,6 +18,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import static com.prescription.proj.helper.Constants.*;
 
@@ -38,6 +42,8 @@ public class AppointmentController {
     public void binder(WebDataBinder binder) {
         binder.registerCustomEditor(User.class, new UserEditor(userService));
         binder.registerCustomEditor(Patient.class, new PatientEditor(patientService));
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, true));
     }
 
     @RequestMapping(value = APPOINTMENT_PATH, method = RequestMethod.GET)

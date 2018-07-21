@@ -1,5 +1,6 @@
 package com.prescription.proj.controller;
 
+import com.prescription.proj.domain.PathologyReport;
 import com.prescription.proj.domain.Patient;
 import com.prescription.proj.domain.Test;
 import com.prescription.proj.domain.User;
@@ -59,6 +60,15 @@ public class PathologyController {
 
         pathologyService.save(test);
         return redirectTo(HOME_PATH);
+    }
+
+    @RequestMapping(value = CREATE_PATHOLOGY_PATH, method = RequestMethod.GET)
+    public String report(@RequestParam Long testId, ModelMap model) {
+        PathologyReport report = new PathologyReport();
+        report.setTest(pathologyService.getTest(testId));
+
+        model.addAttribute(REPORT, report);
+        return PATHOLOGY_VIEW;
     }
 
     private Test getTest(Long patientId) {

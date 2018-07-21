@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="jumbotron">
-    <h4>All ${role}s</h4><br>
+    <h4>All ${role.name}s</h4><br>
     <div class="table-responsive">
         <table id="dataTable" class="table table-bordered">
             <thead>

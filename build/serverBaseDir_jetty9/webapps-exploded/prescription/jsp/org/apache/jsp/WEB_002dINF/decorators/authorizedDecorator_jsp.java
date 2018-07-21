@@ -155,14 +155,18 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
       if (_jspx_meth_c_if_3(_jspx_page_context))
         return;
       out.write("\r\n");
-      out.write("\r\n");
       out.write("                ");
       if (_jspx_meth_c_if_4(_jspx_page_context))
         return;
       out.write("\r\n");
       out.write("\r\n");
+      out.write("                ");
+      if (_jspx_meth_c_if_5(_jspx_page_context))
+        return;
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("                <li><a href=\"");
-      if (_jspx_meth_c_url_22(_jspx_page_context))
+      if (_jspx_meth_c_url_23(_jspx_page_context))
         return;
       out.write("\">Logout</a></li>\r\n");
       out.write("            </ul>\r\n");
@@ -645,42 +649,15 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_4 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
     _jspx_th_c_if_4.setPageContext(_jspx_page_context);
     _jspx_th_c_if_4.setParent(null);
-    _jspx_th_c_if_4.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty Admin}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    _jspx_th_c_if_4.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty Pharmacist or not empty Admin}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
     int _jspx_eval_c_if_4 = _jspx_th_c_if_4.doStartTag();
     if (_jspx_eval_c_if_4 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
       do {
         out.write("\r\n");
-        out.write("                    <li class=\"dropdown\">\r\n");
-        out.write("                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n");
-        out.write("                            Users <span class=\"caret\"></span>\r\n");
-        out.write("                        </a>\r\n");
-        out.write("                        <ul class=\"dropdown-menu\">\r\n");
-        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        out.write("                    <li><a href=\"");
         if (_jspx_meth_c_url_16((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_4, _jspx_page_context))
           return true;
-        out.write("\">Receptionist</a></li>\r\n");
-        out.write("                            <li><a class=\"dropdown-item\" href=\"");
-        if (_jspx_meth_c_url_17((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_4, _jspx_page_context))
-          return true;
-        out.write("\">Referrer</a></li>\r\n");
-        out.write("                            <li><a class=\"dropdown-item\" href=\"");
-        if (_jspx_meth_c_url_18((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_4, _jspx_page_context))
-          return true;
-        out.write("\">Doctor</a></li>\r\n");
-        out.write("                            <li><a class=\"dropdown-item\" href=\"");
-        if (_jspx_meth_c_url_19((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_4, _jspx_page_context))
-          return true;
-        out.write("\">Pathologist</a></li>\r\n");
-        out.write("                            <li><a class=\"dropdown-item\" href=\"");
-        if (_jspx_meth_c_url_20((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_4, _jspx_page_context))
-          return true;
-        out.write("\">Pharmacist</a></li>\r\n");
-        out.write("                            <li><a class=\"dropdown-item\" href=\"");
-        if (_jspx_meth_c_url_21((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_4, _jspx_page_context))
-          return true;
-        out.write("\">Admin</a></li>\r\n");
-        out.write("                        </ul>\r\n");
-        out.write("                    </li>\r\n");
+        out.write("\">Medicines</a></li>\r\n");
         out.write("                ");
         int evalDoAfterBody = _jspx_th_c_if_4.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
@@ -703,7 +680,7 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_16 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_16.setPageContext(_jspx_page_context);
     _jspx_th_c_url_16.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_4);
-    _jspx_th_c_url_16.setValue("/users?role=RECEPTIONIST");
+    _jspx_th_c_url_16.setValue("/medicine");
     int _jspx_eval_c_url_16 = _jspx_th_c_url_16.doStartTag();
     if (_jspx_th_c_url_16.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_16);
@@ -713,15 +690,73 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_17(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_4, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_if_5(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:if
+    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_5 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
+    _jspx_th_c_if_5.setPageContext(_jspx_page_context);
+    _jspx_th_c_if_5.setParent(null);
+    _jspx_th_c_if_5.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty Admin}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
+    int _jspx_eval_c_if_5 = _jspx_th_c_if_5.doStartTag();
+    if (_jspx_eval_c_if_5 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\r\n");
+        out.write("                    <li class=\"dropdown\">\r\n");
+        out.write("                        <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">\r\n");
+        out.write("                            Users <span class=\"caret\"></span>\r\n");
+        out.write("                        </a>\r\n");
+        out.write("                        <ul class=\"dropdown-menu\">\r\n");
+        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        if (_jspx_meth_c_url_17((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_5, _jspx_page_context))
+          return true;
+        out.write("\">Receptionist</a></li>\r\n");
+        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        if (_jspx_meth_c_url_18((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_5, _jspx_page_context))
+          return true;
+        out.write("\">Referrer</a></li>\r\n");
+        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        if (_jspx_meth_c_url_19((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_5, _jspx_page_context))
+          return true;
+        out.write("\">Doctor</a></li>\r\n");
+        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        if (_jspx_meth_c_url_20((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_5, _jspx_page_context))
+          return true;
+        out.write("\">Pathologist</a></li>\r\n");
+        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        if (_jspx_meth_c_url_21((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_5, _jspx_page_context))
+          return true;
+        out.write("\">Pharmacist</a></li>\r\n");
+        out.write("                            <li><a class=\"dropdown-item\" href=\"");
+        if (_jspx_meth_c_url_22((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_5, _jspx_page_context))
+          return true;
+        out.write("\">Admin</a></li>\r\n");
+        out.write("                        </ul>\r\n");
+        out.write("                    </li>\r\n");
+        out.write("                ");
+        int evalDoAfterBody = _jspx_th_c_if_5.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_c_if_5.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_5);
+      return true;
+    }
+    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_5);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_17(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_5, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_17 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_17.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_17.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_4);
-    _jspx_th_c_url_17.setValue("/users?role=REFERRER");
+    _jspx_th_c_url_17.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_5);
+    _jspx_th_c_url_17.setValue("/users?role=RECEPTIONIST");
     int _jspx_eval_c_url_17 = _jspx_th_c_url_17.doStartTag();
     if (_jspx_th_c_url_17.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_17);
@@ -731,15 +766,15 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_18(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_4, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_url_18(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_5, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_18 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_18.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_18.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_4);
-    _jspx_th_c_url_18.setValue("/users?role=DOCTOR");
+    _jspx_th_c_url_18.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_5);
+    _jspx_th_c_url_18.setValue("/users?role=REFERRER");
     int _jspx_eval_c_url_18 = _jspx_th_c_url_18.doStartTag();
     if (_jspx_th_c_url_18.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_18);
@@ -749,15 +784,15 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_19(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_4, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_url_19(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_5, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_19 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_19.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_19.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_4);
-    _jspx_th_c_url_19.setValue("/users?role=PATHOLOGIST");
+    _jspx_th_c_url_19.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_5);
+    _jspx_th_c_url_19.setValue("/users?role=DOCTOR");
     int _jspx_eval_c_url_19 = _jspx_th_c_url_19.doStartTag();
     if (_jspx_th_c_url_19.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_19);
@@ -767,15 +802,15 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_20(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_4, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_url_20(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_5, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_20 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_20.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_20.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_4);
-    _jspx_th_c_url_20.setValue("/users?role=PHARMACIST");
+    _jspx_th_c_url_20.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_5);
+    _jspx_th_c_url_20.setValue("/users?role=PATHOLOGIST");
     int _jspx_eval_c_url_20 = _jspx_th_c_url_20.doStartTag();
     if (_jspx_th_c_url_20.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_20);
@@ -785,15 +820,15 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_21(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_4, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_url_21(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_5, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_21 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_21.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_21.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_4);
-    _jspx_th_c_url_21.setValue("/users?role=ADMIN");
+    _jspx_th_c_url_21.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_5);
+    _jspx_th_c_url_21.setValue("/users?role=PHARMACIST");
     int _jspx_eval_c_url_21 = _jspx_th_c_url_21.doStartTag();
     if (_jspx_th_c_url_21.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_21);
@@ -803,21 +838,39 @@ public final class authorizedDecorator_jsp extends org.apache.jasper.runtime.Htt
     return false;
   }
 
-  private boolean _jspx_meth_c_url_22(PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_url_22(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_5, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:url
     org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_22 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
     _jspx_th_c_url_22.setPageContext(_jspx_page_context);
-    _jspx_th_c_url_22.setParent(null);
-    _jspx_th_c_url_22.setValue("/logout");
+    _jspx_th_c_url_22.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_5);
+    _jspx_th_c_url_22.setValue("/users?role=ADMIN");
     int _jspx_eval_c_url_22 = _jspx_th_c_url_22.doStartTag();
     if (_jspx_th_c_url_22.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_22);
       return true;
     }
     _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_22);
+    return false;
+  }
+
+  private boolean _jspx_meth_c_url_23(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:url
+    org.apache.taglibs.standard.tag.rt.core.UrlTag _jspx_th_c_url_23 = (org.apache.taglibs.standard.tag.rt.core.UrlTag) _jspx_tagPool_c_url_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.UrlTag.class);
+    _jspx_th_c_url_23.setPageContext(_jspx_page_context);
+    _jspx_th_c_url_23.setParent(null);
+    _jspx_th_c_url_23.setValue("/logout");
+    int _jspx_eval_c_url_23 = _jspx_th_c_url_23.doStartTag();
+    if (_jspx_th_c_url_23.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_23);
+      return true;
+    }
+    _jspx_tagPool_c_url_value_nobody.reuse(_jspx_th_c_url_23);
     return false;
   }
 
