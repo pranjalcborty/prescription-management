@@ -64,11 +64,30 @@ public class PathologyController {
 
     @RequestMapping(value = CREATE_PATHOLOGY_PATH, method = RequestMethod.GET)
     public String report(@RequestParam Long testId, ModelMap model) {
-        PathologyReport report = new PathologyReport();
-        report.setTest(pathologyService.getTest(testId));
+        if (notHasRole(User.Role.ADMIN, User.Role.PATHOLOGIST)) {
+            return FAIL_VIEW;
+        }
 
-        model.addAttribute(REPORT, report);
+        PathologyReport report = new PathologyReport();
+
+        model.addAttribute(REPORT, report).addAttribute(TEST, pathologyService.getTest(testId));
         return PATHOLOGY_VIEW;
+    }
+
+    @RequestMapping(value = CREATE_PATHOLOGY_PATH, method = RequestMethod.POST)
+    public String saveReport(@Valid @ModelAttribute(REPORT) PathologyReport report, BindingResult result,
+                             @RequestParam Long testId, ModelMap model) {
+        if (notHasRole(User.Role.ADMIN, User.Role.PATHOLOGIST)) {
+            return FAIL_VIEW;
+        }
+
+        if (result.hasErrors()) {
+            model.addAttribute(REPORT, report).addAttribute(TEST, pathologyService.getTest(testId));
+            return PATHOLOGY_VIEW;
+        }
+
+        pathologyService.save(report, testId);
+        return redirectTo(HOME_PATH);
     }
 
     private Test getTest(Long patientId) {

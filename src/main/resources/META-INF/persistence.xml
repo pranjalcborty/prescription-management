@@ -14,6 +14,7 @@
         <class>com.prescription.proj.domain.Appointment</class>
         <class>com.prescription.proj.domain.Test</class>
         <class>com.prescription.proj.domain.Medicine</class>
+        <class>com.prescription.proj.domain.PathologyReport</class>
 
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/prescription"/>

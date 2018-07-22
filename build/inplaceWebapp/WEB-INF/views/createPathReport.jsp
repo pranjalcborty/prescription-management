@@ -14,22 +14,34 @@
 </head>
 <body>
 <div class="row">
-    <div class="col-xs-8 col-xs-offset-2">
+    <div class="col-xs-6 col-xs-offset-3">
         <div class="jumbotron">
             <form:form modelAttribute="report" method="post">
                 <div class="form-group">
-                    <label>Patient name</label>
-                    <c:out value="${report.test.patient.name}"/>
+                    <label>Patient name:</label>
+                    <c:out value="${test.patient.name}"/>
                 </div>
+
                 <div class="form-group">
-                    <label>Referred by</label>
-                    <c:out value="${report.test.createdBy.name}"/>
+                    <label>Referred by:</label>
+                    <c:out value="${test.createdBy.name}"/>
                 </div>
 
                 <div>
-                    <legend>Pathology report</legend>
+                    <label>Pathology report</label>
                     <form:textarea path="reportBody" id="jqte"/>
                     <form:errors path="reportBody" cssClass="error"/>
+                </div>
+
+                <div class="form-group">
+                    <label>Remarks</label>
+                    <form:textarea path="remarks" cssClass="form-control"/>
+                    <form:errors path="remarks" cssClass="error"/>
+                </div>
+
+                <div class="pull-right">
+                    <button type="submit" class="btn btn-success">
+                        <i class="fas fa-save"></i> Save Prescription</button>
                 </div>
             </form:form>
         </div>

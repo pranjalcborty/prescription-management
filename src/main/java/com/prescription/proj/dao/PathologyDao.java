@@ -1,5 +1,6 @@
 package com.prescription.proj.dao;
 
+import com.prescription.proj.domain.PathologyReport;
 import com.prescription.proj.domain.Test;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,6 +22,16 @@ public class PathologyDao {
 
     @Transactional
     public void merge(Test test) {
+        em.merge(test);
+    }
+
+    @Transactional
+    public void save(PathologyReport test) {
+        em.persist(test);
+    }
+
+    @Transactional
+    public void merge(PathologyReport test) {
         em.merge(test);
     }
 
