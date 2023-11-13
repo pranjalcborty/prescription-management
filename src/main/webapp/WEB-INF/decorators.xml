@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<decorators defaultDir="/WEB-INF/decorators">
+    <decorator name="not-logged-in" page="defaultDecorator.jsp">
+        <pattern>/login</pattern>
+        <pattern>/register</pattern>
+    </decorator>
+
+    <decorator name="logged-in" page="authorizedDecorator.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+</decorators>

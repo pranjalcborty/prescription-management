@@ -1,0 +1,6 @@
+call git checkout -f master
+call git branch -D feature/login-register
+call git fetch --all
+call git checkout -f origin/feature/login-register
+call gradle clean build
+call gradle appRun
